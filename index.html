@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<title>Aminur Laskar | Johnny</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#05070d;
+    color:white;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body{
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(0,220,255,0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(145,80,255,0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0,255,180,0.10),
+            transparent 35%
+        ),
+        #05070d;
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:42px 42px;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+#website{
+
+    width:100%;
+    height:100vh;
+
+    position:relative;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    overflow:hidden;
+
+    padding:
+        25px
+        18px
+        125px;
+
+    z-index:5;
+
+}
+
+.page.active{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    animation:pageShow 0.4s ease;
+
+}
+
+
+@keyframes pageShow{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content{
+
+    width:min(1050px,100%);
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+/* =========================================================
+   TOP BADGE
+========================================================= */
+
+.badge-top{
+
+    display:inline-block;
+
+    padding:
+        10px
+        20px;
+
+    border:
+        1px solid
+        rgba(98,234,255,0.55);
+
+    border-radius:50px;
+
+    background:
+        rgba(98,234,255,0.08);
+
+    color:#62eaff;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+}
+
+
+/* =========================================================
+   BIG TEXT
+========================================================= */
+
+.big-title{
+
+    margin-top:25px;
+
+    font-size:
+        clamp(
+            50px,
+            13vw,
+            145px
+        );
+
+    line-height:0.84;
+
+    font-weight:1000;
+
+    letter-spacing:-5px;
+
+    text-transform:uppercase;
+
+}
+
+.big-title .blue{
+
+    color:#62eaff;
+
+    text-shadow:
+        0 0 12px rgba(98,234,255,0.65),
+        0 0 45px rgba(98,234,255,0.35);
+
+}
+
+.big-title .white{
+
+    color:white;
+
+}
+
+.big-title .purple{
+
+    color:#ad8cff;
+
+    text-shadow:
+        0 0 12px rgba(173,140,255,0.6),
+        0 0 45px rgba(173,140,255,0.35);
+
+}
+
+.big-title .green{
+
+    color:#65ffc9;
+
+    text-shadow:
+        0 0 12px rgba(101,255,201,0.6),
+        0 0 45px rgba(101,255,201,0.3);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description{
+
+    max-width:750px;
+
+    margin:
+        28px
+        auto
+        0;
+
+    color:#aeb8c8;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   STICKERS
+========================================================= */
+
+.stickers{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:28px;
+
+}
+
+.sticker{
+
+    padding:
+        12px
+        18px;
+
+    border-radius:10px;
+
+    color:#05070d;
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+
+    background:#62eaff;
+
+    box-shadow:
+        5px
+        6px
+        0
+        rgba(0,0,0,0.35);
+
+    transform:rotate(-2deg);
+
+}
+
+.sticker:nth-child(2){
+
+    background:#65ffc9;
+
+    transform:rotate(2deg);
+
+}
+
+.sticker:nth-child(3){
+
+    background:#ad8cff;
+
+    transform:rotate(-3deg);
+
+}
+
+.sticker:nth-child(4){
+
+    background:white;
+
+    transform:rotate(3deg);
+
+}
+
+
+/* =========================================================
+   PHYSICS BOXES
+========================================================= */
+
+.physics{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.physics span{
+
+    padding:
+        11px
+        18px;
+
+    border:
+        1px
+        solid
+        rgba(255,255,255,0.12);
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    color:#d8e1ed;
+
+    font-weight:900;
+
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.heading{
+
+    margin-bottom:25px;
+
+}
+
+.heading h2{
+
+    margin-top:15px;
+
+    font-size:
+        clamp(
+            38px,
+            8vw,
+            80px
+        );
+
+    line-height:0.9;
+
+    font-weight:1000;
+
+    text-transform:uppercase;
+
+}
+
+.heading p{
+
+    margin-top:12px;
+
+    color:#8e9aac;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+    width:100%;
+
+    max-width:950px;
+
+    margin:auto;
+
+    padding:30px 25px;
+
+    border:
+        1px
+        solid
+        rgba(255,255,255,0.10);
+
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    box-shadow:
+        0
+        20px
+        70px
+        rgba(0,0,0,0.45);
+
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.name{
+
+    font-size:
+        clamp(
+            45px,
+            9vw,
+            105px
+        );
+
+    line-height:0.85;
+
+    font-weight:1000;
+
+    letter-spacing:-4px;
+
+    text-transform:uppercase;
+
+}
+
+.nickname{
+
+    margin-top:20px;
+
+    font-size:
+        clamp(
+            25px,
+            5vw,
+            55px
+        );
+
+    font-weight:1000;
+
+    letter-spacing:5px;
+
+    color:#62eaff;
+
+}
+
+.ajmal{
+
+    margin-top:18px;
+
+    color:#c1ccd9;
+
+    font-size:17px;
+
+}
+
+.ajmal strong{
+
+    color:#65ffc9;
+
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.photo{
+
+    width:min(330px,85vw);
+
+    aspect-ratio:4/5;
+
+    margin:
+        22px
+        auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    border:
+        2px
+        solid
+        rgba(98,234,255,0.40);
+
+    background:#111722;
+
+    box-shadow:
+        0
+        0
+        40px
+        rgba(98,234,255,0.15);
+
+}
+
+.photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   SCRATCH COVER
+========================================================= */
+
+.scratch{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:10;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    background:
+        repeating-linear-gradient(
+            125deg,
+            #17202c 0px,
+            #17202c 5px,
+            #2a3545 5px,
+            #2a3545 10px
+        );
+
+    transition:
+        transform 0.7s ease,
+        opacity 0.7s ease;
+
+}
+
+.scratch::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    border:
+        2px
+        dashed
+        rgba(255,255,255,0.3);
+
+    border-radius:18px;
+
+}
+
+.scratch-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.scratch-content strong{
+
+    display:block;
+
+    color:#62eaff;
+
+    font-size:23px;
+
+    font-weight:1000;
+
+}
+
+.scratch-content small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#d0d8e3;
+
+    letter-spacing:2px;
+
+}
+
+.photo.reveal .scratch{
+
+    transform:translateY(-100%);
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.intro p{
+
+    color:#c0c9d5;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+
+}
+
+.power-text{
+
+    margin:
+        25px
+        0;
+
+    color:#62eaff;
+
+    font-size:
+        clamp(
+            30px,
+            7vw,
+            65px
+        );
+
+    font-weight:1000;
+
+    line-height:0.95;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   PERSONALITY GRID
+========================================================= */
+
+.grid{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:18px;
+
+}
+
+.personality{
+
+    padding:15px;
+
+    border:
+        1px
+        solid
+        rgba(255,255,255,0.10);
+
+    border-radius:22px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+}
+
+.personality-photo{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:#101722;
+
+}
+
+.personality-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.personality h3{
+
+    margin-top:15px;
+
+    font-size:
+        clamp(
+            25px,
+            5vw,
+            45px
+        );
+
+    line-height:0.95;
+
+    font-weight:1000;
+
+    text-transform:uppercase;
+
+}
+
+.personality p{
+
+    margin-top:8px;
+
+    color:#98a5b6;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.personality:nth-child(1) h3{
+
+    color:#62eaff;
+
+}
+
+.personality:nth-child(2) h3{
+
+    color:#65ffc9;
+
+}
+
+.personality:nth-child(3) h3{
+
+    color:#ad8cff;
+
+}
+
+.personality:nth-child(4) h3{
+
+    color:white;
+
+}
+
+
+/* =========================================================
+   MOTIVATION
+========================================================= */
+
+.motivation{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.motivation-card{
+
+    padding:
+        18px
+        20px;
+
+    text-align:left;
+
+    border-left:
+        5px
+        solid
+        #62eaff;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(98,234,255,0.09),
+            rgba(255,255,255,0.035)
+        );
+
+}
+
+.motivation-card small{
+
+    color:#65ffc9;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+
+}
+
+.motivation-card h3{
+
+    margin-top:6px;
+
+    font-size:
+        clamp(
+            20px,
+            4vw,
+            34px
+        );
+
+    line-height:1.1;
+
+    text-transform:uppercase;
+
+}
+
+.motivation-card p{
+
+    margin-top:6px;
+
+    color:#9ba8b8;
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final h2{
+
+    font-size:
+        clamp(
+            50px,
+            11vw,
+            120px
+        );
+
+    line-height:0.83;
+
+    font-weight:1000;
+
+    text-transform:uppercase;
+
+}
+
+.final p{
+
+    max-width:700px;
+
+    margin:
+        25px
+        auto;
+
+    color:#aab5c4;
+
+    line-height:1.7;
+
+    font-size:17px;
+
+}
+
+
+/* =========================================================
+   ⭐ NAVIGATION INSIDE EVERY PAGE
+========================================================= */
+
+.page-navigation{
+
+    position:absolute;
+
+    left:10px;
+
+    right:10px;
+
+    bottom:12px;
+
+    z-index:1000;
+
+    padding:10px;
+
+    border:
+        1px
+        solid
+        rgba(98,234,255,0.20);
+
+    border-radius:20px;
+
+    background:
+        rgba(4,7,14,0.96);
+
+    box-shadow:
+        0
+        -5px
+        35px
+        rgba(0,0,0,0.55);
+
+}
+
+.nav-label{
+
+    text-align:center;
+
+    color:#62eaff;
+
+    font-size:9px;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+
+}
+
+.nav-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:7px;
+
+}
+
+.nav-button{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    border:
+        1px
+        solid
+        rgba(255,255,255,0.18);
+
+    border-radius:13px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color:white;
+
+    min-height:44px;
+
+    padding:
+        9px
+        12px;
+
+    font-size:10px;
+
+    font-weight:1000;
+
+    cursor:pointer;
+
+    flex:1;
+
+    transition:0.2s ease;
+
+}
+
+.nav-button:hover{
+
+    background:#62eaff;
+
+    color:#05070d;
+
+}
+
+.nav-button.next{
+
+    background:
+        linear-gradient(
+            135deg,
+            #62eaff,
+            #65ffc9
+        );
+
+    color:#05070d;
+
+    border:none;
+
+}
+
+.nav-button.home{
+
+    background:
+        rgba(173,140,255,0.18);
+
+    color:#d7caff;
+
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+========================================================= */
+
+.page-number{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    z-index:1000;
+
+    padding:
+        7px
+        11px;
+
+    border-radius:30px;
+
+    background:
+        rgba(0,0,0,0.55);
+
+    color:#8d9bad;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .page{
+
+        padding:
+            20px
+            12px
+            125px;
+
+    }
+
+    .big-title{
+
+        letter-spacing:-3px;
+
+    }
+
+    .card{
+
+        padding:
+            22px
+            15px;
+
+    }
+
+    .name{
+
+        letter-spacing:-3px;
+
+    }
+
+    .description{
+
+        font-size:16px;
+
+    }
+
+    .intro p{
+
+        font-size:16px;
+
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+    .personality{
+
+        padding:12px;
+
+    }
+
+    .personality-photo{
+
+        aspect-ratio:16/8;
+
+    }
+
+    .personality h3{
+
+        font-size:28px;
+
+    }
+
+    .motivation-card{
+
+        padding:
+            14px
+            16px;
+
+    }
+
+    .nav-row{
+
+        gap:5px;
+
+    }
+
+    .nav-button{
+
+        min-height:42px;
+
+        padding:
+            8px
+            5px;
+
+        font-size:9px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .page{
+
+        padding-bottom:125px;
+
+    }
+
+    .nav-button{
+
+        font-size:8px;
+
+        min-height:40px;
+
+    }
+
+    .nav-label{
+
+        font-size:8px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="website">
+
+
+<!-- =====================================================
+     PAGE 1 — HOME
+===================================================== -->
+
+<section
+    class="page active"
+    id="page1"
+>
+
+<div class="content">
+
+<div class="badge-top">
+⚡ PHYSICS SPECIAL
+</div>
+
+
+<div class="big-title">
+
+<span class="blue">
+AMINUR
+</span>
+
+<span class="white">
+LASKAR
+</span>
+
+</div>
+
+
+<div
+    class="big-title"
+    style="
+        font-size:clamp(35px,7vw,72px);
+        margin-top:20px;
+    "
+>
+
+<span class="purple">
+THE JOHNNY
+</span>
+
+</div>
+
+
+<p class="description">
+
+Aesthetic tribute to a personality known
+for confidence, friendliness, sharp thinking
+and a mind that never stops questioning.
+
+</p>
+
+
+<div class="stickers">
+
+<div class="sticker">
+⚡ PHYSICS MIND
+</div>
+
+<div class="sticker">
+🧠 SHARP
+</div>
+
+<div class="sticker">
+🔥 JOHNNY
+</div>
+
+<div class="sticker">
+🚀 UNSTOPPABLE
+</div>
+
+</div>
+
+
+<div class="physics">
+
+<span>
+E = mc²
+</span>
+
+<span>
+F = ma
+</span>
+
+<span>
+λ = h/p
+</span>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 1 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ PAGE 1 • TAP TO CONTINUE ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button next"
+    onclick="goToPage(2)"
+>
+NEXT PAGE →
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+1 / 6
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2 — NAME
+===================================================== -->
+
+<section
+    class="page"
+    id="page2"
+>
+
+<div class="content">
+
+<div class="heading">
+
+<div class="badge-top">
+01 • IDENTITY
+</div>
+
+<h2>
+MEET THE
+<span class="blue">
+JOHNNY
+</span>
+</h2>
+
+<p>
+The name behind the personality.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="name">
+
+AMINUR
+
+<br>
+
+<span class="blue">
+LASKAR
+</span>
+
+</div>
+
+
+<div class="nickname">
+“JOHNNY”
+</div>
+
+
+<p class="ajmal">
+
+⚡ Physics Teacher •
+<strong>Ajmal Super 40</strong> •
+Mentor
+
+</p>
+
+
+<div
+    class="photo"
+    id="scratchPhoto"
+>
+
+<img
+    src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+    alt="Aminur Laskar"
+>
+
+
+<div
+    class="scratch"
+    onclick="revealPhoto()"
+>
+
+<div class="scratch-content">
+
+<strong>
+✦ SCRATCH / TAP ✦
+</strong>
+
+<small>
+REVEAL THE PICTURE
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="stickers">
+
+<div class="sticker">
+⚡ JOHNNY
+</div>
+
+<div class="sticker">
+🎯 FOCUSED
+</div>
+
+<div class="sticker">
+🧠 BRAIN MODE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 2 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ PAGE 2 • NAVIGATION ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button"
+    onclick="goToPage(1)"
+>
+← BACK
+</button>
+
+<button
+    class="nav-button home"
+    onclick="goToPage(1)"
+>
+🏠 HOME
+</button>
+
+<button
+    class="nav-button next"
+    onclick="goToPage(3)"
+>
+NEXT PAGE →
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+2 / 6
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3 — INTRODUCTION
+===================================================== -->
+
+<section
+    class="page"
+    id="page3"
+>
+
+<div class="content">
+
+<div class="heading">
+
+<div class="badge-top">
+02 • INTRODUCTION
+</div>
+
+<h2>
+THE
+<span class="green">
+PERSONALITY
+</span>
+</h2>
+
+<p>
+More than a name — a memorable presence.
+</p>
+
+</div>
+
+
+<div class="card intro">
+
+<p>
+
+Meet <strong>Aminur Laskar</strong>,
+famously known as
+<strong>Johnny</strong>.
+
+A personality combining confidence,
+friendliness, intelligence and a
+sharp way of thinking.
+
+</p>
+
+
+<p>
+
+With his connection to
+<strong>Ajmal Super 40</strong>,
+physics becomes more than formulas
+and equations.
+
+It becomes a way of thinking,
+questioning and solving.
+
+</p>
+
+
+<div class="power-text">
+
+THINK SHARP.<br>
+STAY CALM.<br>
+MOVE FORWARD.
+
+</div>
+
+
+<p>
+
+The real impression comes from
+knowledge, attitude, confidence
+and friendliness.
+
+</p>
+
+
+<div class="stickers">
+
+<div class="sticker">
+😎 HANDSOME
+</div>
+
+<div class="sticker">
+🤝 FRIENDLY
+</div>
+
+<div class="sticker">
+🧠 SHARP MIND
+</div>
+
+<div class="sticker">
+💫 MIND-BLOWING
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 3 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ PAGE 3 • NAVIGATION ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button"
+    onclick="goToPage(2)"
+>
+← BACK
+</button>
+
+<button
+    class="nav-button home"
+    onclick="goToPage(1)"
+>
+🏠 HOME
+</button>
+
+<button
+    class="nav-button next"
+    onclick="goToPage(4)"
+>
+NEXT PAGE →
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+3 / 6
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 4 — PERSONALITY
+===================================================== -->
+
+<section
+    class="page"
+    id="page4"
+>
+
+<div class="content">
+
+<div class="heading">
+
+<div class="badge-top">
+03 • PERSONALITY
+</div>
+
+<h2>
+FOUR
+<span class="blue">
+VIBES
+</span>
+</h2>
+
+<p>
+Different qualities. One unforgettable personality.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- HANDSOME -->
+
+<div class="personality">
+
+<div class="personality-photo">
+
+<img
+    src="IMG_20260904_083942.jpg"
+    alt="Aminur Laskar"
+>
+
+</div>
+
+<h3>
+😎 HANDSOME
+</h3>
+
+<p>
+
+Confidence is the real style.
+The right attitude makes
+a personality stand out naturally.
+
+</p>
+
+</div>
+
+
+<!-- FRIENDLY -->
+
+<div class="personality">
+
+<div class="personality-photo">
+
+<img
+    src="IMG_20260904_083858.jpg"
+    alt="Aminur Laskar"
+>
+
+</div>
+
+<h3>
+🤝 FRIENDLY
+</h3>
+
+<p>
+
+A strong personality is not
+only about intelligence.
+
+Being approachable,
+respectful and friendly matters too.
+
+</p>
+
+</div>
+
+
+<!-- SHARP MIND -->
+
+<div class="personality">
+
+<div class="personality-photo">
+
+<img
+    src="IMG_20260904_083928.jpg"
+    alt="Aminur Laskar"
+>
+
+</div>
+
+<h3>
+🧠 SHARP MIND
+</h3>
+
+<p>
+
+Physics demands logic,
+focus and curiosity.
+
+Ask why.
+Ask how.
+Keep learning.
+
+</p>
+
+</div>
+
+
+<!-- MIND BLOWING -->
+
+<div class="personality">
+
+<div class="personality-photo">
+
+<img
+    src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+    alt="Aminur Laskar"
+>
+
+</div>
+
+<h3>
+💫 MIND-BLOWING
+</h3>
+
+<p>
+
+Knowledge, confidence,
+friendliness and personality
+create an impression people remember.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- PAGE 4 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ PAGE 4 • NAVIGATION ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button"
+    onclick="goToPage(3)"
+>
+← BACK
+</button>
+
+<button
+    class="nav-button home"
+    onclick="goToPage(1)"
+>
+🏠 HOME
+</button>
+
+<button
+    class="nav-button next"
+    onclick="goToPage(5)"
+>
+NEXT PAGE →
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+4 / 6
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 5 — BOYS MOTIVATION
+===================================================== -->
+
+<section
+    class="page"
+    id="page5"
+>
+
+<div class="content">
+
+<div class="heading">
+
+<div class="badge-top">
+04 • SHARP MINDSET
+</div>
+
+<h2>
+
+<span class="purple">
+BOYS'
+</span>
+
+<br>
+
+MINDSET
+
+</h2>
+
+<p>
+Five powerful lines for a sharp mind.
+</p>
+
+</div>
+
+
+<div class="motivation">
+
+
+<div class="motivation-card">
+
+<small>
+MINDSET 01
+</small>
+
+<h3>
+🧠 Train Your Mind Before Your Image.
+</h3>
+
+<p>
+A sharp mind creates confidence
+that appearance alone cannot create.
+</p>
+
+</div>
+
+
+<div class="motivation-card">
+
+<small>
+MINDSET 02
+</small>
+
+<h3>
+🔥 Don't Chase Attention. Build Value.
+</h3>
+
+<p>
+Work on yourself quietly.
+Let your results make the noise.
+</p>
+
+</div>
+
+
+<div class="motivation-card">
+
+<small>
+MINDSET 03
+</small>
+
+<h3>
+⚡ Stay Calm. Think Fast. Move Smart.
+</h3>
+
+<p>
+Pressure should sharpen your mind,
+not control your decisions.
+</p>
+
+</div>
+
+
+<div class="motivation-card">
+
+<small>
+MINDSET 04
+</small>
+
+<h3>
+🦁 Discipline Makes You Stronger.
+</h3>
+
+<p>
+Motivation starts the journey,
+but discipline keeps you moving.
+</p>
+
+</div>
+
+
+<div class="motivation-card">
+
+<small>
+MINDSET 05
+</small>
+
+<h3>
+🚀 Dream Big. Work Silent. Become Unstoppable.
+</h3>
+
+<p>
+Keep improving even when nobody
+is watching. Let your growth speak.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- PAGE 5 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ PAGE 5 • NAVIGATION ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button"
+    onclick="goToPage(4)"
+>
+← BACK
+</button>
+
+<button
+    class="nav-button home"
+    onclick="goToPage(1)"
+>
+🏠 HOME
+</button>
+
+<button
+    class="nav-button next"
+    onclick="goToPage(6)"
+>
+NEXT PAGE →
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+5 / 6
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 6 — FINAL
+===================================================== -->
+
+<section
+    class="page"
+    id="page6"
+>
+
+<div class="content final">
+
+<div class="badge-top">
+05 • FINAL FRAME
+</div>
+
+
+<h2>
+
+<span class="blue">
+STAY
+</span>
+
+<br>
+
+SHARP.
+
+<br>
+
+<span class="purple">
+STAY
+</span>
+
+<br>
+
+UNSTOPPABLE.
+
+</h2>
+
+
+<p>
+
+A name can be remembered.
+
+A lesson can be remembered.
+
+But a personality that inspires
+people can become a memory
+for a lifetime.
+
+</p>
+
+
+<div class="stickers">
+
+<div class="sticker">
+⚡ AMINUR LASKAR
+</div>
+
+<div class="sticker">
+🧠 JOHNNY
+</div>
+
+<div class="sticker">
+🚀 KEEP GOING
+</div>
+
+</div>
+
+
+<p
+    style="
+        color:#62eaff;
+        font-weight:1000;
+        margin-top:25px;
+    "
+>
+
+PHYSICS • MINDSET • PERSONALITY • INSPIRATION
+
+</p>
+
+</div>
+
+
+<!-- PAGE 6 NAVIGATION -->
+
+<div class="page-navigation">
+
+<div class="nav-label">
+⚡ FINAL PAGE • JOHNNY ⚡
+</div>
+
+<div class="nav-row">
+
+<button
+    class="nav-button"
+    onclick="goToPage(5)"
+>
+← BACK
+</button>
+
+<button
+    class="nav-button home"
+    onclick="goToPage(1)"
+>
+🏠 HOME
+</button>
+
+</div>
+
+</div>
+
+
+<div class="page-number">
+6 / 6
+</div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   PAGE CONTROL
+========================================================= */
+
+let currentPage = 1;
+
+const totalPages = 6;
+
+
+/* =========================================================
+   GO TO PAGE
+========================================================= */
+
+function goToPage(pageNumber){
+
+    if(pageNumber < 1){
+
+        pageNumber = 1;
+
+    }
+
+
+    if(pageNumber > totalPages){
+
+        pageNumber = totalPages;
+
+    }
+
+
+    currentPage = pageNumber;
+
+
+    const pages =
+        document.querySelectorAll(".page");
+
+
+    pages.forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    const page =
+        document.getElementById(
+            "page" + currentPage
+        );
+
+
+    if(page){
+
+        page.classList.add("active");
+
+    }
+
+}
+
+
+/* =========================================================
+   SCRATCH PHOTO
+========================================================= */
+
+function revealPhoto(){
+
+    const photo =
+        document.getElementById(
+            "scratchPhoto"
+        );
+
+
+    if(photo){
+
+        photo.classList.add("reveal");
+
+    }
+
+}
+
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "ArrowRight"){
+
+            if(currentPage < totalPages){
+
+                goToPage(currentPage + 1);
+
+            }
+
+        }
+
+
+        if(event.key === "ArrowLeft"){
+
+            if(currentPage > 1){
+
+                goToPage(currentPage - 1);
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+goToPage(1);
+
+</script>
+
+
+</body>
+</html>
