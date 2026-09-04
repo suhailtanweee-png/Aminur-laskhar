@@ -1,1743 +1,1494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<meta name="theme-color" content="#050711">
-
-<meta name="description"
-      content="A premium Teacher's Day tribute dedicated to Aminur Laskar — The Johnny, Physics Teacher.">
-
-<title>The Johnny — Aminur Laskar | Teacher's Day Tribute</title>
-
-<style>
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #03040a;
-    color: #ffffff;
-}
-
-/* =========================================================
-   BACKGROUND
-========================================================= */
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -5;
-
-    background:
-        radial-gradient(circle at 15% 15%, rgba(0, 255, 255, 0.15), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(150, 50, 255, 0.18), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(0, 150, 255, 0.10), transparent 30%),
-        #03040a;
-}
-
-/* =========================================================
-   PARTICLES
-========================================================= */
-
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -2;
-    overflow: hidden;
-}
-
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: twinkle 3s infinite ease-in-out;
-}
-
-.star:nth-child(1)  { left: 5%;  top: 15%; animation-delay: .2s; }
-.star:nth-child(2)  { left: 15%; top: 70%; animation-delay: 1s; }
-.star:nth-child(3)  { left: 25%; top: 35%; animation-delay: 2s; }
-.star:nth-child(4)  { left: 35%; top: 80%; animation-delay: .7s; }
-.star:nth-child(5)  { left: 45%; top: 20%; animation-delay: 1.4s; }
-.star:nth-child(6)  { left: 55%; top: 60%; animation-delay: .4s; }
-.star:nth-child(7)  { left: 65%; top: 12%; animation-delay: 1.8s; }
-.star:nth-child(8)  { left: 75%; top: 75%; animation-delay: .9s; }
-.star:nth-child(9)  { left: 85%; top: 40%; animation-delay: 2.3s; }
-.star:nth-child(10) { left: 95%; top: 65%; animation-delay: 1.2s; }
-.star:nth-child(11) { left: 30%; top: 10%; animation-delay: .5s; }
-.star:nth-child(12) { left: 70%; top: 50%; animation-delay: 1.6s; }
-
-@keyframes twinkle {
-    0%,100% {
-        opacity: .2;
-        transform: scale(.7);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-}
 
-/* =========================================================
-   PAGE SYSTEM
-========================================================= */
+    <meta charset="UTF-8">
 
-.page {
-    position: absolute;
-    inset: 0;
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    width: 100%;
-    height: 100dvh;
+    <meta name="theme-color" content="#03040a">
 
-    display: none;
+    <meta name="description"
+          content="Teacher's Day Tribute to Aminur Laskar — The Johnny">
 
-    overflow: hidden;
-}
+    <title>The Johnny | Aminur Laskar</title>
 
-.page.active {
-    display: block;
-    animation: pageIn .55s ease;
-}
 
-@keyframes pageIn {
-    from {
-        opacity: 0;
-        transform: scale(.97);
-    }
+    <style>
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        /* =====================================================
+           BASIC RESET
+        ===================================================== */
 
-.page-scroll {
-    width: 100%;
-    height: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    overflow-y: auto;
-    overflow-x: hidden;
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-    padding:
-        35px
-        20px
-        145px;
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-    scrollbar-width: none;
-}
+            background: #03040a;
 
-.page-scroll::-webkit-scrollbar {
-    display: none;
-}
+            color: white;
 
-/* =========================================================
-   COMMON
-========================================================= */
+            overflow: hidden;
+        }
 
-.container {
-    width: min(1050px, 100%);
-    margin: auto;
-}
 
-.center {
-    text-align: center;
-}
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
 
-.tag {
-    display: inline-block;
+        body::before {
+            content: "";
 
-    padding: 8px 15px;
+            position: fixed;
 
-    border: 1px solid rgba(0,255,255,.4);
+            inset: 0;
 
-    border-radius: 999px;
+            z-index: -10;
 
-    color: #76ffff;
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(0,255,255,0.16),
+                    transparent 30%
+                ),
 
-    background: rgba(0,255,255,.07);
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(150,60,255,0.18),
+                    transparent 30%
+                ),
 
-    font-size: 12px;
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(0,130,255,0.12),
+                    transparent 35%
+                ),
 
-    letter-spacing: 2px;
+                #03040a;
+        }
 
-    text-transform: uppercase;
 
-    margin-bottom: 20px;
+        /* =====================================================
+           STARS
+        ===================================================== */
 
-    box-shadow:
-        0 0 20px rgba(0,255,255,.1);
-}
+        .stars {
+            position: fixed;
 
-h1 {
-    font-size: clamp(48px, 11vw, 110px);
+            inset: 0;
 
-    line-height: .9;
+            z-index: -5;
 
-    letter-spacing: -5px;
+            pointer-events: none;
 
-    font-weight: 900;
+            overflow: hidden;
+        }
 
-    background:
-        linear-gradient(
-            120deg,
-            #ffffff,
-            #76ffff,
-            #b57cff,
-            #ffffff
-        );
+        .star {
+            position: absolute;
+
+            width: 2px;
+            height: 2px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            opacity: .5;
+
+            animation:
+                twinkle 3s infinite ease-in-out;
+        }
+
+        .star:nth-child(1) {
+            left: 5%;
+            top: 12%;
+            animation-delay: .2s;
+        }
+
+        .star:nth-child(2) {
+            left: 12%;
+            top: 70%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(3) {
+            left: 20%;
+            top: 35%;
+            animation-delay: 1.5s;
+        }
+
+        .star:nth-child(4) {
+            left: 29%;
+            top: 82%;
+            animation-delay: .5s;
+        }
+
+        .star:nth-child(5) {
+            left: 40%;
+            top: 18%;
+            animation-delay: 2s;
+        }
+
+        .star:nth-child(6) {
+            left: 50%;
+            top: 55%;
+            animation-delay: .8s;
+        }
 
-    background-size: 300% 300%;
+        .star:nth-child(7) {
+            left: 61%;
+            top: 10%;
+            animation-delay: 1.8s;
+        }
 
-    -webkit-background-clip: text;
-    background-clip: text;
+        .star:nth-child(8) {
+            left: 70%;
+            top: 78%;
+            animation-delay: .3s;
+        }
 
-    color: transparent;
+        .star:nth-child(9) {
+            left: 81%;
+            top: 42%;
+            animation-delay: 2.2s;
+        }
 
-    animation: gradientMove 7s ease infinite;
-}
+        .star:nth-child(10) {
+            left: 93%;
+            top: 68%;
+            animation-delay: 1.2s;
+        }
 
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
+        .star:nth-child(11) {
+            left: 35%;
+            top: 8%;
+            animation-delay: .9s;
+        }
 
-    50% {
-        background-position: 100% 50%;
-    }
+        .star:nth-child(12) {
+            left: 75%;
+            top: 20%;
+            animation-delay: 1.4s;
+        }
 
-    100% {
-        background-position: 0% 50%;
-    }
-}
+        @keyframes twinkle {
 
-h2 {
-    font-size: clamp(35px, 7vw, 70px);
+            0%,
+            100% {
+                opacity: .2;
+                transform: scale(.7);
+            }
 
-    line-height: 1;
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
 
-    margin-bottom: 20px;
 
-    letter-spacing: -2px;
-}
+        /* =====================================================
+           PAGE SYSTEM
+        ===================================================== */
 
-h3 {
-    font-size: 24px;
+        .page {
+            position: fixed;
 
-    margin-bottom: 10px;
-}
+            inset: 0;
 
-p {
-    color: #b9c3d5;
+            width: 100%;
+            height: 100dvh;
 
-    line-height: 1.7;
+            display: none;
 
-    font-size: 16px;
-}
+            overflow: hidden;
+        }
 
-.highlight {
-    color: #70ffff;
-}
+        .page.active {
+            display: block;
 
-.purple {
-    color: #c69aff;
-}
+            animation:
+                pageAppear .45s ease;
+        }
 
-/* =========================================================
-   GLASS CARD
-========================================================= */
+        @keyframes pageAppear {
 
-.card {
-    position: relative;
+            from {
+                opacity: 0;
+                transform: scale(.98);
+            }
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.08),
-            rgba(255,255,255,.025)
-        );
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-    border: 1px solid rgba(255,255,255,.12);
 
-    border-radius: 25px;
+        /* =====================================================
+           SCROLL AREA
+        ===================================================== */
 
-    padding: 28px;
+        .page-scroll {
+            width: 100%;
 
-    backdrop-filter: blur(20px);
+            height: 100%;
 
-    -webkit-backdrop-filter: blur(20px);
+            overflow-y: auto;
 
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.35),
-        inset 0 1px rgba(255,255,255,.08);
-}
+            overflow-x: hidden;
 
-/* =========================================================
-   PAGE 1
-========================================================= */
+            -webkit-overflow-scrolling: touch;
 
-.hero {
-    min-height: calc(100dvh - 180px);
+            padding:
+                30px
+                20px
+                150px;
 
-    display: flex;
+            scrollbar-width: none;
+        }
 
-    flex-direction: column;
+        .page-scroll::-webkit-scrollbar {
+            display: none;
+        }
 
-    justify-content: center;
 
-    align-items: center;
+        /* =====================================================
+           CONTAINER
+        ===================================================== */
 
-    text-align: center;
-}
+        .container {
+            width: min(1050px, 100%);
 
-.hero-top {
-    font-size: 18px;
+            margin: 0 auto;
+        }
 
-    color: #b8c6d9;
 
-    margin-bottom: 20px;
+        /* =====================================================
+           COMMON TEXT
+        ===================================================== */
 
-    letter-spacing: 4px;
+        .center {
+            text-align: center;
+        }
 
-    text-transform: uppercase;
-}
+        .tag {
+            display: inline-block;
 
-.hero-subtitle {
-    font-size: clamp(20px, 4vw, 30px);
+            padding: 8px 16px;
 
-    margin-top: 25px;
+            border:
+                1px solid
+                rgba(0,255,255,.35);
 
-    color: #ffffff;
+            border-radius: 999px;
 
-    font-weight: 700;
-}
+            background:
+                rgba(0,255,255,.06);
 
-.hero-description {
-    max-width: 700px;
+            color: #72ffff;
 
-    margin: 20px auto 0;
+            font-size: 11px;
 
-    color: #9da9bd;
-}
+            font-weight: 800;
 
-.formula {
-    margin-top: 35px;
+            letter-spacing: 2px;
 
-    font-size: clamp(20px, 4vw, 35px);
+            text-transform: uppercase;
 
-    color: #72ffff;
+            margin-bottom: 20px;
+        }
 
-    font-family: Georgia, serif;
+        h1 {
+            font-size:
+                clamp(52px, 12vw, 115px);
 
-    letter-spacing: 5px;
+            line-height: .86;
 
-    text-shadow:
-        0 0 20px rgba(0,255,255,.4);
-}
+            letter-spacing: -6px;
 
-.badges {
-    display: flex;
+            font-weight: 900;
 
-    flex-wrap: wrap;
+            background:
+                linear-gradient(
+                    120deg,
+                    #ffffff,
+                    #72ffff,
+                    #b17cff,
+                    #ffffff
+                );
 
-    justify-content: center;
+            background-size: 300% 300%;
 
-    gap: 10px;
+            -webkit-background-clip: text;
 
-    margin-top: 30px;
-}
+            background-clip: text;
 
-.badge {
-    padding: 10px 15px;
+            color: transparent;
 
-    border-radius: 999px;
+            animation:
+                gradientMove 7s ease infinite;
+        }
 
-    background: rgba(255,255,255,.06);
+        @keyframes gradientMove {
 
-    border: 1px solid rgba(255,255,255,.1);
+            0% {
+                background-position: 0% 50%;
+            }
 
-    color: #d8deeb;
+            50% {
+                background-position: 100% 50%;
+            }
 
-    font-size: 13px;
-}
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-/* =========================================================
-   PAGE 2
-========================================================= */
+        h2 {
+            font-size:
+                clamp(35px, 7vw, 70px);
 
-.page-title {
-    text-align: center;
+            line-height: .95;
 
-    margin-bottom: 30px;
-}
+            letter-spacing: -3px;
 
-.identity-grid {
-    display: grid;
+            margin-bottom: 20px;
+        }
 
-    grid-template-columns:
-        repeat(2, minmax(0,1fr));
+        h3 {
+            font-size: 24px;
 
-    gap: 25px;
+            margin-bottom: 10px;
+        }
 
-    align-items: stretch;
-}
+        p {
+            color: #b7c1d2;
 
-.teacher-photo {
-    position: relative;
+            line-height: 1.7;
 
-    width: 100%;
+            font-size: 16px;
+        }
 
-    aspect-ratio: 4 / 5;
+        .highlight {
+            color: #72ffff;
+        }
 
-    overflow: hidden;
+        .purple {
+            color: #c69aff;
+        }
 
-    border-radius: 25px;
 
-    border: 1px solid rgba(0,255,255,.25);
+        /* =====================================================
+           GLASS CARD
+        ===================================================== */
 
-    background: #080b14;
+        .card {
+            position: relative;
 
-    box-shadow:
-        0 0 50px rgba(0,255,255,.08);
-}
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.08),
+                    rgba(255,255,255,.025)
+                );
 
-.teacher-photo img {
-    width: 100%;
-    height: 100%;
+            border:
+                1px solid
+                rgba(255,255,255,.12);
 
-    object-fit: cover;
+            border-radius: 25px;
 
-    display: block;
+            padding: 28px;
 
-    transition:
-        opacity .7s ease,
-        transform .7s ease;
-}
+            backdrop-filter: blur(20px);
 
-.teacher-photo.revealed img {
-    opacity: 1;
-    transform: scale(1);
-}
+            -webkit-backdrop-filter: blur(20px);
 
-.photo-hidden {
-    position: absolute;
+            box-shadow:
+                0 20px 60px rgba(0,0,0,.35),
+                inset 0 1px rgba(255,255,255,.07);
+        }
 
-    inset: 0;
 
-    z-index: 2;
+        /* =====================================================
+           PAGE 1
+        ===================================================== */
 
-    display: flex;
+        .hero {
+            min-height:
+                calc(100dvh - 170px);
 
-    flex-direction: column;
+            display: flex;
 
-    align-items: center;
+            flex-direction: column;
 
-    justify-content: center;
+            justify-content: center;
 
-    text-align: center;
+            align-items: center;
 
-    padding: 25px;
+            text-align: center;
+        }
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(0,255,255,.15),
-            rgba(4,6,15,.98)
-        );
+        .hero-top {
+            color: #b8c3d5;
 
-    transition:
-        opacity .6s ease,
-        visibility .6s ease;
-}
+            font-size: 15px;
 
-.teacher-photo.revealed .photo-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
+            letter-spacing: 4px;
 
-.photo-icon {
-    font-size: 55px;
+            text-transform: uppercase;
 
-    margin-bottom: 15px;
-}
+            margin-bottom: 20px;
+        }
 
-.reveal-button {
-    border: none;
+        .hero-subtitle {
+            margin-top: 25px;
 
-    cursor: pointer;
+            font-size:
+                clamp(22px, 5vw, 32px);
 
-    margin-top: 20px;
+            font-weight: 800;
+        }
 
-    padding: 14px 24px;
+        .hero-description {
+            max-width: 700px;
 
-    border-radius: 999px;
+            margin:
+                20px auto 0;
 
-    color: #001014;
+            color: #9da8ba;
+        }
 
-    background: linear-gradient(
-        135deg,
-        #72ffff,
-        #9f7cff
-    );
+        .formula {
+            margin-top: 32px;
 
-    font-weight: 900;
+            color: #72ffff;
 
-    letter-spacing: 1px;
+            font-family: Georgia, serif;
 
-    box-shadow:
-        0 0 30px rgba(0,255,255,.25);
+            font-size:
+                clamp(18px, 4vw, 30px);
 
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
+            letter-spacing: 3px;
 
-.reveal-button:active {
-    transform: scale(.94);
-}
+            text-shadow:
+                0 0 20px
+                rgba(0,255,255,.35);
+        }
 
-.reveal-button:hover {
-    transform: translateY(-2px);
+        .badges {
+            display: flex;
 
-    box-shadow:
-        0 0 40px rgba(0,255,255,.4);
-}
+            flex-wrap: wrap;
 
-.identity-text {
-    display: flex;
+            justify-content: center;
 
-    flex-direction: column;
+            gap: 10px;
 
-    justify-content: center;
-}
+            margin-top: 28px;
+        }
 
-.identity-name {
-    font-size: clamp(35px, 7vw, 65px);
+        .badge {
+            padding: 10px 15px;
 
-    font-weight: 900;
+            border-radius: 999px;
 
-    line-height: .95;
+            background:
+                rgba(255,255,255,.05);
 
-    margin-bottom: 15px;
-}
+            border:
+                1px solid
+                rgba(255,255,255,.1);
 
-.identity-role {
-    color: #72ffff;
+            color: #dce3ef;
 
-    font-size: 18px;
+            font-size: 12px;
+        }
 
-    font-weight: bold;
 
-    letter-spacing: 2px;
+        /* =====================================================
+           PAGE TITLE
+        ===================================================== */
 
-    text-transform: uppercase;
+        .page-title {
+            text-align: center;
 
-    margin-bottom: 25px;
-}
+            margin-bottom: 30px;
+        }
 
-.ajmal {
-    margin-top: 25px;
 
-    padding: 18px;
+        /* =====================================================
+           PAGE 2
+        ===================================================== */
 
-    border-left: 3px solid #72ffff;
+        .identity-grid {
+            display: grid;
 
-    background: rgba(0,255,255,.05);
+            grid-template-columns:
+                repeat(2,minmax(0,1fr));
 
-    border-radius: 0 15px 15px 0;
-}
+            gap: 25px;
+        }
 
-/* =========================================================
-   PAGE 3
-========================================================= */
+        .teacher-photo {
+            position: relative;
 
-.intro-grid {
-    display: grid;
+            width: 100%;
 
-    grid-template-columns:
-        1.2fr .8fr;
+            aspect-ratio: 4 / 5;
 
-    gap: 25px;
-}
+            overflow: hidden;
 
-.quote {
-    font-size: clamp(25px, 5vw, 45px);
+            border-radius: 22px;
 
-    line-height: 1.15;
+            background: #070a12;
 
-    font-weight: 800;
+            border:
+                1px solid
+                rgba(0,255,255,.25);
+        }
 
-    color: white;
+        .teacher-photo img {
+            width: 100%;
 
-    margin-bottom: 25px;
-}
+            height: 100%;
 
-.quote-mark {
-    color: #72ffff;
+            object-fit: cover;
 
-    font-size: 60px;
+            display: block;
 
-    line-height: 0;
-}
+            opacity: 1;
 
-.stats {
-    display: grid;
+            transform: scale(1);
 
-    grid-template-columns:
-        repeat(2,1fr);
+            transition:
+                transform .6s ease;
+        }
 
-    gap: 12px;
+        .teacher-photo:hover img {
+            transform: scale(1.03);
+        }
 
-    margin-top: 25px;
-}
+        .photo-hidden {
+            position: absolute;
 
-.stat {
-    padding: 20px;
+            inset: 0;
 
-    border-radius: 18px;
+            z-index: 5;
 
-    background: rgba(255,255,255,.04);
+            display: flex;
 
-    border: 1px solid rgba(255,255,255,.08);
-}
+            flex-direction: column;
 
-.stat strong {
-    display: block;
+            justify-content: center;
 
-    font-size: 30px;
+            align-items: center;
 
-    color: #72ffff;
+            text-align: center;
 
-    margin-bottom: 5px;
-}
+            padding: 25px;
 
-/* =========================================================
-   PAGE 4
-========================================================= */
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,255,255,.15),
+                    rgba(3,5,13,.98)
+                );
 
-.vibe-grid {
-    display: grid;
+            transition:
+                opacity .5s ease,
+                visibility .5s ease;
+        }
 
-    grid-template-columns:
-        repeat(2, minmax(0,1fr));
+        .teacher-photo.revealed
+        .photo-hidden {
+            opacity: 0;
 
-    gap: 20px;
-}
+            visibility: hidden;
 
-.vibe-card {
-    overflow: hidden;
+            pointer-events: none;
+        }
 
-    padding: 0;
+        .photo-icon {
+            font-size: 55px;
 
-    transition:
-        transform .3s ease,
-        border-color .3s ease;
-}
+            margin-bottom: 15px;
+        }
 
-.vibe-card:hover {
-    transform: translateY(-5px);
+        .reveal-button {
+            border: none;
 
-    border-color: rgba(0,255,255,.4);
-}
+            outline: none;
 
-.vibe-image {
-    width: 100%;
+            cursor: pointer;
 
-    aspect-ratio: 16 / 10;
+            margin-top: 20px;
 
-    overflow: hidden;
-}
+            padding:
+                15px 25px;
 
-.vibe-image img {
-    width: 100%;
-    height: 100%;
+            border-radius: 999px;
 
-    object-fit: cover;
+            background:
+                linear-gradient(
+                    135deg,
+                    #72ffff,
+                    #9e7cff
+                );
 
-    display: block;
+            color: #02050b;
 
-    transition: transform .6s ease;
-}
+            font-weight: 900;
 
-.vibe-card:hover .vibe-image img {
-    transform: scale(1.07);
-}
+            letter-spacing: 1px;
 
-.vibe-content {
-    padding: 22px;
-}
+            box-shadow:
+                0 0 30px
+                rgba(0,255,255,.25);
 
-.vibe-number {
-    color: #72ffff;
+            transition:
+                transform .2s ease;
+        }
 
-    font-size: 12px;
+        .reveal-button:active {
+            transform: scale(.94);
+        }
 
-    font-weight: bold;
+        .identity-text {
+            display: flex;
 
-    letter-spacing: 3px;
-}
+            flex-direction: column;
 
-.vibe-title {
-    margin-top: 8px;
+            justify-content: center;
+        }
 
-    font-size: 28px;
+        .identity-role {
+            color: #72ffff;
 
-    font-weight: 900;
-}
+            font-size: 17px;
 
-.vibe-text {
-    margin-top: 8px;
-}
+            font-weight: 800;
 
-/* =========================================================
-   PAGE 5
-========================================================= */
+            letter-spacing: 2px;
 
-.mindset-header {
-    text-align: center;
+            margin-bottom: 20px;
+        }
 
-    margin-bottom: 30px;
-}
+        .identity-name {
+            font-size:
+                clamp(38px,7vw,68px);
 
-.mindset-list {
-    display: grid;
+            line-height: .9;
 
-    gap: 15px;
+            font-weight: 900;
 
-    max-width: 850px;
+            letter-spacing: -3px;
 
-    margin: auto;
-}
+            margin-bottom: 20px;
+        }
 
-.mindset-item {
-    display: flex;
+        .ajmal {
+            margin-top: 25px;
 
-    align-items: center;
+            padding: 18px;
 
-    gap: 18px;
+            border-left:
+                3px solid #72ffff;
 
-    padding: 20px;
+            background:
+                rgba(0,255,255,.05);
 
-    border-radius: 20px;
+            border-radius:
+                0 15px 15px 0;
+        }
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,255,255,.08),
-            rgba(150,80,255,.05)
-        );
 
-    border: 1px solid rgba(255,255,255,.1);
+        /* =====================================================
+           PAGE 3
+        ===================================================== */
 
-    transition:
-        transform .25s ease,
-        border-color .25s ease;
-}
+        .intro-grid {
+            display: grid;
 
-.mindset-item:hover {
-    transform: translateX(6px);
+            grid-template-columns:
+                1.2fr .8fr;
 
-    border-color: rgba(0,255,255,.35);
-}
+            gap: 25px;
+        }
 
-.mindset-number {
-    min-width: 48px;
-    height: 48px;
+        .quote-mark {
+            color: #72ffff;
 
-    display: flex;
+            font-size: 65px;
 
-    align-items: center;
+            line-height: .5;
+        }
 
-    justify-content: center;
+        .quote {
+            font-size:
+                clamp(27px,5vw,46px);
 
-    border-radius: 50%;
+            line-height: 1.1;
 
-    background:
-        linear-gradient(
-            135deg,
-            #72ffff,
-            #9d78ff
-        );
+            font-weight: 900;
 
-    color: #02050b;
+            margin:
+                20px 0 25px;
+        }
 
-    font-weight: 900;
+        .stats {
+            display: grid;
 
-    font-size: 17px;
-}
+            grid-template-columns:
+                repeat(2,1fr);
 
-.mindset-text {
-    font-size: 18px;
+            gap: 12px;
 
-    font-weight: 700;
+            margin-top: 25px;
+        }
 
-    color: #f3f6ff;
-}
+        .stat {
+            padding: 20px;
 
-/* =========================================================
-   PAGE 6
-========================================================= */
+            border-radius: 18px;
 
-.final {
-    min-height: calc(100dvh - 170px);
+            background:
+                rgba(255,255,255,.04);
 
-    display: flex;
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+        }
 
-    flex-direction: column;
+        .stat strong {
+            display: block;
 
-    justify-content: center;
+            color: #72ffff;
 
-    align-items: center;
+            font-size: 30px;
 
-    text-align: center;
-}
+            margin-bottom: 5px;
+        }
 
-.final-symbol {
-    font-size: 70px;
 
-    margin-bottom: 25px;
+        /* =====================================================
+           PAGE 4
+        ===================================================== */
 
-    animation: float 3s ease-in-out infinite;
-}
+        .vibe-grid {
+            display: grid;
 
-@keyframes float {
-    0%,100% {
-        transform: translateY(0);
-    }
+            grid-template-columns:
+                repeat(2,minmax(0,1fr));
 
-    50% {
-        transform: translateY(-12px);
-    }
-}
+            gap: 20px;
+        }
 
-.thanks {
-    font-size: clamp(45px, 9vw, 95px);
+        .vibe-card {
+            padding: 0;
 
-    font-weight: 900;
+            overflow: hidden;
 
-    line-height: .9;
+            transition:
+                transform .25s ease;
+        }
 
-    letter-spacing: -4px;
+        .vibe-card:hover {
+            transform: translateY(-4px);
+        }
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #72ffff,
-            #b17cff
-        );
+        .vibe-image {
+            width: 100%;
 
-    -webkit-background-clip: text;
-    background-clip: text;
+            aspect-ratio: 16 / 10;
 
-    color: transparent;
-}
+            overflow: hidden;
+        }
 
-.creator {
-    margin-top: 35px;
+        .vibe-image img {
+            width: 100%;
 
-    padding: 15px 22px;
+            height: 100%;
 
-    border-radius: 999px;
+            display: block;
 
-    border: 1px solid rgba(0,255,255,.2);
+            object-fit: cover;
 
-    background: rgba(255,255,255,.05);
+            transition:
+                transform .5s ease;
+        }
 
-    color: #dce4f2;
+        .vibe-card:hover
+        .vibe-image img {
+            transform: scale(1.06);
+        }
 
-    font-size: 14px;
+        .vibe-content {
+            padding: 22px;
+        }
 
-    letter-spacing: 1px;
-}
+        .vibe-number {
+            color: #72ffff;
 
-.heart {
-    color: #ff5f91;
-}
+            font-size: 11px;
 
-/* =========================================================
-   BOTTOM NAVIGATION
-========================================================= */
+            font-weight: 800;
 
-.bottom-nav {
-    position: fixed;
+            letter-spacing: 3px;
+        }
 
-    left: 10px;
-    right: 10px;
+        .vibe-title {
+            margin-top: 8px;
 
-    bottom:
-        max(10px, env(safe-area-inset-bottom));
+            font-size: 27px;
 
-    z-index: 99999;
+            font-weight: 900;
+        }
 
-    width: auto;
+        .vibe-text {
+            margin-top: 8px;
+        }
 
-    display: flex;
 
-    align-items: center;
+        /* =====================================================
+           PAGE 5
+        ===================================================== */
 
-    justify-content: space-between;
+        .mindset-header {
+            text-align: center;
 
-    gap: 8px;
+            margin-bottom: 30px;
+        }
 
-    padding: 10px;
+        .mindset-header p {
+            max-width: 700px;
 
-    border-radius: 20px;
+            margin: auto;
+        }
 
-    background:
-        rgba(4,7,15,.94);
+        .mindset-list {
+            max-width: 850px;
 
-    border: 1px solid rgba(255,255,255,.16);
+            margin: auto;
 
-    box-shadow:
-        0 15px 50px rgba(0,0,0,.7),
-        0 0 30px rgba(0,255,255,.08);
+            display: grid;
 
-    backdrop-filter: blur(20px);
+            gap: 15px;
+        }
 
-    -webkit-backdrop-filter: blur(20px);
-}
+        .mindset-item {
+            display: flex;
 
-.nav-button {
-    min-height: 48px;
+            align-items: center;
 
-    flex: 1;
+            gap: 18px;
 
-    display: flex;
+            padding: 20px;
 
-    align-items: center;
+            border-radius: 20px;
 
-    justify-content: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,255,255,.08),
+                    rgba(150,70,255,.05)
+                );
 
-    border: none;
+            border:
+                1px solid
+                rgba(255,255,255,.1);
 
-    border-radius: 14px;
+            transition:
+                transform .25s ease;
+        }
 
-    background: rgba(255,255,255,.07);
+        .mindset-item:hover {
+            transform: translateX(5px);
+        }
 
-    color: #ffffff;
+        .mindset-number {
+            min-width: 48px;
 
-    font-weight: 800;
+            width: 48px;
 
-    font-size: 12px;
+            height: 48px;
 
-    letter-spacing: .5px;
+            display: flex;
 
-    cursor: pointer;
+            justify-content: center;
 
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
+            align-items: center;
 
-.nav-button:hover {
-    background: rgba(0,255,255,.13);
-}
+            border-radius: 50%;
 
-.nav-button:active {
-    transform: scale(.94);
-}
+            background:
+                linear-gradient(
+                    135deg,
+                    #72ffff,
+                    #9e7cff
+                );
 
-.nav-button.next {
-    background:
-        linear-gradient(
-            135deg,
-            #72ffff,
-            #8d72ff
-        );
+            color: #02050b;
 
-    color: #02050b;
-}
+            font-weight: 900;
+        }
 
-.nav-page {
-    min-width: 70px;
+        .mindset-text {
+            font-size: 18px;
 
-    text-align: center;
+            font-weight: 800;
 
-    color: #8f9caf;
+            color: #f1f4fa;
+        }
 
-    font-size: 11px;
 
-    font-weight: 800;
+        /* =====================================================
+           PAGE 6
+        ===================================================== */
 
-    letter-spacing: 1px;
-}
+        .final {
+            min-height:
+                calc(100dvh - 170px);
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+            display: flex;
 
-@media (max-width: 750px) {
+            flex-direction: column;
 
-    .page-scroll {
-        padding-top: 25px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 135px;
-    }
+            justify-content: center;
 
-    .identity-grid,
-    .intro-grid {
-        grid-template-columns: 1fr;
-    }
+            align-items: center;
 
-    .vibe-grid {
-        grid-template-columns: 1fr;
-    }
+            text-align: center;
+        }
 
-    .teacher-photo {
-        max-width: 430px;
-        margin: auto;
-    }
+        .final-symbol {
+            font-size: 70px;
 
-    .bottom-nav {
-        padding: 8px;
-    }
+            margin-bottom: 20px;
 
-    .nav-button {
-        min-height: 50px;
+            animation:
+                floating 3s infinite ease-in-out;
+        }
 
-        font-size: 10px;
-    }
+        @keyframes floating {
 
-    .nav-page {
-        display: none;
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-    h1 {
-        letter-spacing: -3px;
-    }
-}
+            50% {
+                transform: translateY(-12px);
+            }
+        }
 
-@media (max-width: 400px) {
+        .thanks {
+            font-size:
+                clamp(50px,10vw,100px);
 
-    .nav-button {
-        font-size: 9px;
+            line-height: .85;
 
-        min-height: 47px;
-    }
+            letter-spacing: -5px;
 
-    .card {
-        padding: 20px;
-    }
+            font-weight: 900;
 
-    .mindset-item {
-        padding: 15px;
-    }
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #72ffff,
+                    #b17cff
+                );
 
-    .mindset-text {
-        font-size: 15px;
-    }
-}
+            -webkit-background-clip: text;
 
-</style>
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .creator {
+            margin-top: 35px;
+
+            padding: 15px 22px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.05);
+
+            border:
+                1px solid
+                rgba(0,255,255,.2);
+
+            color: #dce4f2;
+
+            font-size: 13px;
+        }
+
+        .heart {
+            color: #ff5f91;
+        }
+
+
+        /* =====================================================
+           FIXED BOTTOM NAVIGATION
+        ===================================================== */
+
+        .bottom-nav {
+            position: fixed;
+
+            left: 10px;
+
+            right: 10px;
+
+            bottom:
+                max(
+                    10px,
+                    env(safe-area-inset-bottom)
+                );
+
+            z-index: 999999;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+
+            padding: 9px;
+
+            min-height: 66px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(3,6,14,.96);
+
+            border:
+                1px solid
+                rgba(255,255,255,.16);
+
+            box-shadow:
+                0 15px 50px
+                rgba(0,0,0,.75);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .nav-button {
+            flex: 1;
+
+            min-height: 48px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.07);
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition:
+                transform .2s ease,
+                background .2s ease;
+        }
+
+        .nav-button:hover {
+            background:
+                rgba(0,255,255,.12);
+        }
+
+        .nav-button:active {
+            transform: scale(.94);
+        }
+
+        .nav-button.next {
+            color: #02050b;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #72ffff,
+                    #9278ff
+                );
+        }
+
+        .nav-page {
+            min-width: 70px;
+
+            text-align: center;
+
+            color: #9ca8ba;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 750px) {
+
+            .page-scroll {
+                padding:
+                    25px
+                    15px
+                    145px;
+            }
+
+            .identity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vibe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-photo {
+                max-width: 430px;
+
+                margin: auto;
+            }
+
+            .nav-page {
+                display: none;
+            }
+
+            .nav-button {
+                min-height: 50px;
+
+                font-size: 10px;
+            }
+
+            h1 {
+                letter-spacing: -4px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .card {
+                padding: 20px;
+            }
+
+            .mindset-item {
+                padding: 15px;
+            }
+
+            .mindset-text {
+                font-size: 15px;
+            }
+
+            .nav-button {
+                font-size: 9px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- =======================================================
-     STAR BACKGROUND
-======================================================= -->
 
-<div class="stars">
+    <!-- =====================================================
+         STARS
+    ====================================================== -->
 
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
-    <div class="star"></div>
+    <div class="stars">
 
-</div>
-
-
-<!-- =======================================================
-     PAGE 1 — HERO
-======================================================= -->
-
-<section class="page active" id="page1">
-
-    <div class="page-scroll">
-
-        <div class="container hero">
-
-            <div class="hero-top">
-                Teacher's Day Tribute
-            </div>
-
-            <span class="tag">
-                PHYSICS • MENTOR • LEGEND
-            </span>
-
-            <h1>
-                THE<br>
-                JOHNNY
-            </h1>
-
-            <div class="hero-subtitle">
-                Aminur Laskar
-            </div>
-
-            <p class="hero-description">
-                A tribute to the teacher whose sharp mind,
-                powerful personality and unique way of teaching
-                makes Physics feel different.
-            </p>
-
-            <div class="formula">
-                F = ma &nbsp; • &nbsp; E = mc² &nbsp; • &nbsp; Johnny = LEGEND
-            </div>
-
-            <div class="badges">
-
-                <span class="badge">
-                    ⚡ Physics Teacher
-                </span>
-
-                <span class="badge">
-                    🧠 Sharp Mind
-                </span>
-
-                <span class="badge">
-                    🔥 The Johnny
-                </span>
-
-            </div>
-
-        </div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
 
     </div>
 
-    <div class="bottom-nav">
 
-        <button class="nav-button" onclick="goHome()">
-            🏠 HOME
-        </button>
+    <!-- =====================================================
+         PAGE 1
+    ====================================================== -->
 
-        <div class="nav-page">
-            01 / 06
-        </div>
+    <section
+        class="page active"
+        id="page1">
 
-        <button class="nav-button next" onclick="nextPage()">
-            NEXT →
-        </button>
+        <div class="page-scroll">
 
-    </div>
+            <div class="container hero">
 
-</section>
-
-
-<!-- =======================================================
-     PAGE 2 — IDENTITY
-======================================================= -->
-
-<section class="page" id="page2">
-
-    <div class="page-scroll">
-
-        <div class="container">
-
-            <div class="page-title">
+                <div class="hero-top">
+                    TEACHER'S DAY TRIBUTE
+                </div>
 
                 <span class="tag">
-                    THE IDENTITY
+                    PHYSICS • MENTOR • LEGEND
                 </span>
 
-                <h2>
-                    Meet <span class="highlight">Johnny.</span>
-                </h2>
+                <h1>
+                    THE<br>
+                    JOHNNY
+                </h1>
 
-            </div>
-
-            <div class="identity-grid">
-
-                <!-- PHOTO -->
-
-                <div class="card">
-
-                    <div class="teacher-photo" id="teacherPhoto">
-
-                        <img
-                            src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
-                            alt="Aminur Laskar"
-                            onerror="this.style.display='none';"
-                        >
-
-                        <div class="photo-hidden">
-
-                            <div class="photo-icon">
-                                🔐
-                            </div>
-
-                            <h3>
-                                A PHOTO IS LOCKED
-                            </h3>
-
-                            <p>
-                                Tap the button below to reveal
-                                the teacher's photo.
-                            </p>
-
-                            <button
-                                class="reveal-button"
-                                id="revealButton"
-                                onclick="revealPhoto()"
-                            >
-                                ✨ REVEAL PHOTO
-                            </button>
-
-                        </div>
-
-                    </div>
-
+                <div class="hero-subtitle">
+                    Aminur Laskar
                 </div>
 
-
-                <!-- INFORMATION -->
-
-                <div class="card identity-text">
-
-                    <div class="identity-role">
-                        PHYSICS TEACHER
-                    </div>
-
-                    <div class="identity-name">
-                        Aminur<br>
-                        <span class="highlight">
-                            Laskar
-                        </span>
-                    </div>
-
-                    <p>
-                        Known to many students simply as
-                        <strong class="highlight">
-                            "Johnny"
-                        </strong>,
-                        he brings a special energy into the
-                        Physics classroom.
-                    </p>
-
-                    <div class="ajmal">
-
-                        <strong class="highlight">
-                            🚀 AJMAL SUPER 40
-                        </strong>
-
-                        <p>
-                            His journey through
-                            <strong>
-                                Ajmal Super 40
-                            </strong>
-                            adds another layer to the story —
-                            discipline, knowledge and an
-                            ambitious mindset.
-                        </p>
-
-                    </div>
-
-                    <div class="badges">
-
-                        <span class="badge">
-                            ⚡ THE JOHNNY
-                        </span>
-
-                        <span class="badge">
-                            🧠 BRAIN POWER
-                        </span>
-
-                        <span class="badge">
-                            🎯 FOCUS
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="bottom-nav">
-
-        <button class="nav-button" onclick="prevPage()">
-            ← BACK
-        </button>
-
-        <div class="nav-page">
-            02 / 06
-        </div>
-
-        <button class="nav-button next" onclick="nextPage()">
-            NEXT →
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
-     PAGE 3 — INTRODUCTION
-======================================================= -->
-
-<section class="page" id="page3">
-
-    <div class="page-scroll">
-
-        <div class="container">
-
-            <div class="page-title">
-
-                <span class="tag">
-                    THE PERSON
-                </span>
-
-                <h2>
-                    More Than A <span class="purple">Teacher.</span>
-                </h2>
-
-            </div>
-
-            <div class="intro-grid">
-
-                <div class="card">
-
-                    <div class="quote-mark">
-                        “
-                    </div>
-
-                    <div class="quote">
-                        Physics becomes
-                        interesting when the
-                        person teaching it
-                        makes you think.
-                    </div>
-
-                    <p>
-                        Aminur Laskar isn't just about
-                        equations and formulas. His
-                        presence, confidence and way of
-                        approaching problems create a
-                        different atmosphere in class.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        That's what makes
-                        <strong class="highlight">
-                            The Johnny
-                        </strong>
-                        memorable.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        ⚡ Johnny Energy
-                    </h3>
-
-                    <p>
-                        A combination of confidence,
-                        intelligence and personality.
-                    </p>
-
-                    <div class="stats">
-
-                        <div class="stat">
-
-                            <strong>
-                                ∞
-                            </strong>
-
-                            <span>
-                                Curiosity
-                            </span>
-
-                        </div>
-
-                        <div class="stat">
-
-                            <strong>
-                                100%
-                            </strong>
-
-                            <span>
-                                Focus
-                            </span>
-
-                        </div>
-
-                        <div class="stat">
-
-                            <strong>
-                                ⚡
-                            </strong>
-
-                            <span>
-                                Energy
-                            </span>
-
-                        </div>
-
-                        <div class="stat">
-
-                            <strong>
-                                🧠
-                            </strong>
-
-                            <span>
-                                Mindset
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="bottom-nav">
-
-        <button class="nav-button" onclick="prevPage()">
-            ← BACK
-        </button>
-
-        <div class="nav-page">
-            03 / 06
-        </div>
-
-        <button class="nav-button next" onclick="nextPage()">
-            NEXT →
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
-     PAGE 4 — PERSONALITY
-======================================================= -->
-
-<section class="page" id="page4">
-
-    <div class="page-scroll">
-
-        <div class="container">
-
-            <div class="page-title">
-
-                <span class="tag">
-                    THE VIBE
-                </span>
-
-                <h2>
-                    Why <span class="highlight">Johnny</span>
-                    Hits Different.
-                </h2>
-
-            </div>
-
-            <div class="vibe-grid">
-
-                <!-- HANDSOME -->
-
-                <div class="card vibe-card">
-
-                    <div class="vibe-image">
-
-                        <img
-                            src="IMG_20260904_083942.jpg"
-                            alt="Aminur Laskar"
-                            onerror="this.style.display='none';"
-                        >
-
-                    </div>
-
-                    <div class="vibe-content">
-
-                        <div class="vibe-number">
-                            01 / VIBE
-                        </div>
-
-                        <div class="vibe-title">
-                            😎 Handsome
-                        </div>
-
-                        <p class="vibe-text">
-                            Confidence isn't just in the
-                            classroom — it's part of the
-                            Johnny presence.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FRIENDLY -->
-
-                <div class="card vibe-card">
-
-                    <div class="vibe-image">
-
-                        <img
-                            src="IMG_20260904_083858.jpg"
-                            alt="Aminur Laskar"
-                            onerror="this.style.display='none';"
-                        >
-
-                    </div>
-
-                    <div class="vibe-content">
-
-                        <div class="vibe-number">
-                            02 / VIBE
-                        </div>
-
-                        <div class="vibe-title">
-                            🤝 Friendly
-                        </div>
-
-                        <p class="vibe-text">
-                            A strong personality can still
-                            have a warm and approachable
-                            side.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SHARP MIND -->
-
-                <div class="card vibe-card">
-
-                    <div class="vibe-image">
-
-                        <img
-                            src="IMG_20260904_083928.jpg"
-                            alt="Aminur Laskar"
-                            onerror="this.style.display='none';"
-                        >
-
-                    </div>
-
-                    <div class="vibe-content">
-
-                        <div class="vibe-number">
-                            03 / VIBE
-                        </div>
-
-                        <div class="vibe-title">
-                            🧠 Sharp Mind
-                        </div>
-
-                        <p class="vibe-text">
-                            Physics demands logic,
-                            precision and the ability
-                            to see beyond the obvious.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MIND BLOWING -->
-
-                <div class="card vibe-card">
-
-                    <div class="vibe-image">
-
-                        <img
-                            src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
-                            alt="Aminur Laskar"
-                            onerror="this.style.display='none';"
-                        >
-
-                    </div>
-
-                    <div class="vibe-content">
-
-                        <div class="vibe-number">
-                            04 / VIBE
-                        </div>
-
-                        <div class="vibe-title">
-                            🤯 Mind-Blowing
-                        </div>
-
-                        <p class="vibe-text">
-                            The kind of personality that
-                            stays in your memory long
-                            after the class ends.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="bottom-nav">
-
-        <button class="nav-button" onclick="prevPage()">
-            ← BACK
-        </button>
-
-        <div class="nav-page">
-            04 / 06
-        </div>
-
-        <button class="nav-button next" onclick="nextPage()">
-            NEXT →
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =======================================================
-     PAGE 5 — BOYS MINDSET
-======================================================= -->
-
-<section class="page" id="page5">
-
-    <div class="page-scroll">
-
-        <div class="container">
-
-            <div class="mindset-header">
-
-                <span class="tag">
-                    BOYS' MINDSET
-                </span>
-
-                <h2>
-                    Think <span class="highlight">Sharp.</span>
-                    Move Smart.
-                </h2>
-
-                <p>
-                    Five mindset reminders for boys who
-                    want to become stronger, smarter and
-                    more disciplined.
+                <p class="hero-description">
+                    A premium tribute to a Physics teacher
+                    whose sharp mind, confidence and unique
+                    personality make him unforgettable.
                 </p>
 
+                <div class="formula">
+                    F = ma • E = mc² • Johnny = LEGEND
+                </div>
+
+                <div class="badges">
+
+                    <span class="badge">
+                        ⚡ PHYSICS TEACHER
+                    </span>
+
+                    <span class="badge">
+                        🧠 SHARP MIND
+                    </span>
+
+                    <span class="badge">
+                        🔥 THE JOHNNY
+                    </span>
+
+                </div>
+
             </div>
 
+        </div>
 
-            <div class="mindset-list">
 
-                <div class="mindset-item">
+        <div class="bottom-nav">
 
-                    <div class="mindset-number">
-                        01
-                    </div>
+            <button
+                type="button"
+                class="nav-button"
+                onclick="goHome()">
 
-                    <div class="mindset-text">
-                        Train Your Mind Before Your Image.
-                    </div>
+                🏠 HOME
+
+            </button>
+
+            <div class="nav-page">
+                01 / 06
+            </div>
+
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="nextPage()">
+
+                NEXT →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 2
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page2">
+
+        <div class="page-scroll">
+
+            <div class="container">
+
+                <div class="page-title">
+
+                    <span class="tag">
+                        THE IDENTITY
+                    </span>
+
+                    <h2>
+                        Meet
+                        <span class="highlight">
+                            Johnny.
+                        </span>
+                    </h2>
 
                 </div>
 
 
-                <div class="mindset-item">
+                <div class="identity-grid">
 
-                    <div class="mindset-number">
-                        02
+
+                    <!-- PHOTO CARD -->
+
+                    <div class="card">
+
+                        <div
+                            class="teacher-photo"
+                            id="teacherPhoto">
+
+                            <img
+                                src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+                                alt="Aminur Laskar">
+
+                            <div class="photo-hidden">
+
+                                <div class="photo-icon">
+                                    🔐
+                                </div>
+
+                                <h3>
+                                    PHOTO LOCKED
+                                </h3>
+
+                                <p>
+                                    Tap the button below
+                                    to reveal the photo.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="reveal-button"
+                                    id="revealButton"
+                                    onclick="revealPhoto()">
+
+                                    ✨ REVEAL PHOTO
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="mindset-text">
-                        Don't Chase Attention. Build Value.
-                    </div>
 
-                </div>
+                    <!-- INFORMATION CARD -->
+
+                    <div class="card identity-text">
+
+                        <div class="identity-role">
+                            PHYSICS TEACHER
+                        </div>
+
+                        <div class="identity-name">
+
+                            Aminur<br>
+
+                            <span class="highlight">
+                                Laskar
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Known as
+                            <strong class="highlight">
+                                "Johnny"
+                            </strong>
+                            among students, he brings
+                            confidence, knowledge and
+                            personality into the Physics
+                            classroom.
+
+                        </p>
 
 
-                <div class="mindset-item">
+                        <div class="ajmal">
 
-                    <div class="mindset-number">
-                        03
-                    </div>
+                            <strong class="highlight">
+                                🚀 AJMAL SUPER 40
+                            </strong>
 
-                    <div class="mindset-text">
-                        Stay Calm. Think Fast. Move Smart.
-                    </div>
+                            <p>
 
-                </div>
+                                He came from
+                                <strong>
+                                    Ajmal Super 40
+                                </strong>,
+                                adding an inspiring chapter
+                                to his academic journey.
 
+                            </p>
 
-                <div class="mindset-item">
-
-                    <div class="mindset-number">
-                        04
-                    </div>
-
-                    <div class="mindset-text">
-                        Discipline Makes You Stronger.
-                    </div>
-
-                </div>
+                        </div>
 
 
-                <div class="mindset-item">
+                        <div class="badges">
 
-                    <div class="mindset-number">
-                        05
-                    </div>
+                            <span class="badge">
+                                ⚡ THE JOHNNY
+                            </span>
 
-                    <div class="mindset-text">
-                        Dream Big. Work Silent.
-                        Become Unstoppable.
+                            <span class="badge">
+                                🧠 BRAIN POWER
+                            </span>
+
+                            <span class="badge">
+                                🎯 FOCUS
+                            </span>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -1746,314 +1497,922 @@ p {
 
         </div>
 
-    </div>
 
-    <div class="bottom-nav">
+        <div class="bottom-nav">
 
-        <button class="nav-button" onclick="prevPage()">
-            ← BACK
-        </button>
+            <button
+                type="button"
+                class="nav-button"
+                onclick="prevPage()">
 
-        <div class="nav-page">
-            05 / 06
+                ← BACK
+
+            </button>
+
+            <div class="nav-page">
+                02 / 06
+            </div>
+
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="nextPage()">
+
+                NEXT →
+
+            </button>
+
         </div>
 
-        <button class="nav-button next" onclick="nextPage()">
-            NEXT →
-        </button>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =======================================================
-     PAGE 6 — FINAL
-======================================================= -->
+    <!-- =====================================================
+         PAGE 3
+    ====================================================== -->
 
-<section class="page" id="page6">
+    <section
+        class="page"
+        id="page3">
 
-    <div class="page-scroll">
+        <div class="page-scroll">
 
-        <div class="container final">
+            <div class="container">
 
-            <div class="final-symbol">
-                ⚡
+                <div class="page-title">
+
+                    <span class="tag">
+                        THE PERSON
+                    </span>
+
+                    <h2>
+                        More Than A
+                        <span class="purple">
+                            Teacher.
+                        </span>
+                    </h2>
+
+                </div>
+
+
+                <div class="intro-grid">
+
+
+                    <div class="card">
+
+                        <div class="quote-mark">
+                            “
+                        </div>
+
+                        <div class="quote">
+
+                            Physics becomes
+                            interesting when
+                            the teacher makes
+                            you think.
+
+                        </div>
+
+                        <p>
+
+                            Aminur Laskar is more
+                            than equations and
+                            formulas. His presence,
+                            confidence and approach
+                            to problems create a
+                            different classroom
+                            experience.
+
+                        </p>
+
+                        <br>
+
+                        <p>
+
+                            That's what makes
+
+                            <strong class="highlight">
+                                The Johnny
+                            </strong>
+
+                            memorable.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>
+                            ⚡ Johnny Energy
+                        </h3>
+
+                        <p>
+                            A combination of confidence,
+                            intelligence and personality.
+                        </p>
+
+
+                        <div class="stats">
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    ∞
+                                </strong>
+
+                                Curiosity
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    100%
+                                </strong>
+
+                                Focus
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    ⚡
+                                </strong>
+
+                                Energy
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    🧠
+                                </strong>
+
+                                Mindset
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <span class="tag">
-                HAPPY TEACHER'S DAY
-            </span>
+        </div>
 
-            <div class="thanks">
-                THANK<br>
-                YOU.
+
+        <div class="bottom-nav">
+
+            <button
+                type="button"
+                class="nav-button"
+                onclick="prevPage()">
+
+                ← BACK
+
+            </button>
+
+            <div class="nav-page">
+                03 / 06
             </div>
 
-            <p style="max-width:650px; margin-top:25px;">
-                To Aminur Laskar — The Johnny —
-                thank you for making Physics more than
-                just a subject.
-            </p>
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="nextPage()">
 
-            <p style="max-width:650px; margin-top:15px;">
-                Your knowledge, personality and mindset
-                leave a mark on the students who learn
-                from you.
-            </p>
+                NEXT →
 
-            <div class="creator">
+            </button>
 
-                Created by
-                <strong>
-                    SUHAIL TANWEER TAPADAR
-                </strong>
+        </div>
 
-                <span class="heart">
-                    ❤️
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 4
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page4">
+
+        <div class="page-scroll">
+
+            <div class="container">
+
+                <div class="page-title">
+
+                    <span class="tag">
+                        THE VIBE
+                    </span>
+
+                    <h2>
+
+                        Why
+                        <span class="highlight">
+                            Johnny
+                        </span>
+
+                        Hits Different.
+
+                    </h2>
+
+                </div>
+
+
+                <div class="vibe-grid">
+
+
+                    <!-- CARD 1 -->
+
+                    <div class="card vibe-card">
+
+                        <div class="vibe-image">
+
+                            <img
+                                src="IMG_20260904_083942.jpg"
+                                alt="Aminur Laskar">
+
+                        </div>
+
+                        <div class="vibe-content">
+
+                            <div class="vibe-number">
+                                01 / VIBE
+                            </div>
+
+                            <div class="vibe-title">
+                                😎 Handsome
+                            </div>
+
+                            <p class="vibe-text">
+
+                                Confidence and presence
+                                are part of the Johnny
+                                personality.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 2 -->
+
+                    <div class="card vibe-card">
+
+                        <div class="vibe-image">
+
+                            <img
+                                src="IMG_20260904_083858.jpg"
+                                alt="Aminur Laskar">
+
+                        </div>
+
+                        <div class="vibe-content">
+
+                            <div class="vibe-number">
+                                02 / VIBE
+                            </div>
+
+                            <div class="vibe-title">
+                                🤝 Friendly
+                            </div>
+
+                            <p class="vibe-text">
+
+                                Strong personality with
+                                an approachable and
+                                friendly side.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 3 -->
+
+                    <div class="card vibe-card">
+
+                        <div class="vibe-image">
+
+                            <img
+                                src="IMG_20260904_083928.jpg"
+                                alt="Aminur Laskar">
+
+                        </div>
+
+                        <div class="vibe-content">
+
+                            <div class="vibe-number">
+                                03 / VIBE
+                            </div>
+
+                            <div class="vibe-title">
+                                🧠 Sharp Mind
+                            </div>
+
+                            <p class="vibe-text">
+
+                                Physics demands logic,
+                                precision and the ability
+                                to think beyond the obvious.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 4 -->
+
+                    <div class="card vibe-card">
+
+                        <div class="vibe-image">
+
+                            <img
+                                src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+                                alt="Aminur Laskar">
+
+                        </div>
+
+                        <div class="vibe-content">
+
+                            <div class="vibe-number">
+                                04 / VIBE
+                            </div>
+
+                            <div class="vibe-title">
+                                🤯 Mind-Blowing
+                            </div>
+
+                            <p class="vibe-text">
+
+                                A personality that stays
+                                in your memory long after
+                                the class ends.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="bottom-nav">
+
+            <button
+                type="button"
+                class="nav-button"
+                onclick="prevPage()">
+
+                ← BACK
+
+            </button>
+
+            <div class="nav-page">
+                04 / 06
+            </div>
+
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="nextPage()">
+
+                NEXT →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 5
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page5">
+
+        <div class="page-scroll">
+
+            <div class="container">
+
+
+                <div class="mindset-header">
+
+                    <span class="tag">
+                        BOYS' MINDSET
+                    </span>
+
+                    <h2>
+
+                        Think
+                        <span class="highlight">
+                            Sharp.
+                        </span>
+
+                        Move Smart.
+
+                    </h2>
+
+                    <p>
+
+                        Five mindset reminders for boys
+                        who want to become stronger,
+                        smarter and more disciplined.
+
+                    </p>
+
+                </div>
+
+
+                <div class="mindset-list">
+
+
+                    <div class="mindset-item">
+
+                        <div class="mindset-number">
+                            01
+                        </div>
+
+                        <div class="mindset-text">
+
+                            Train Your Mind
+                            Before Your Image.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mindset-item">
+
+                        <div class="mindset-number">
+                            02
+                        </div>
+
+                        <div class="mindset-text">
+
+                            Don't Chase Attention.
+                            Build Value.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mindset-item">
+
+                        <div class="mindset-number">
+                            03
+                        </div>
+
+                        <div class="mindset-text">
+
+                            Stay Calm.
+                            Think Fast.
+                            Move Smart.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mindset-item">
+
+                        <div class="mindset-number">
+                            04
+                        </div>
+
+                        <div class="mindset-text">
+
+                            Discipline Makes
+                            You Stronger.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mindset-item">
+
+                        <div class="mindset-number">
+                            05
+                        </div>
+
+                        <div class="mindset-text">
+
+                            Dream Big.
+                            Work Silent.
+                            Become Unstoppable.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="bottom-nav">
+
+            <button
+                type="button"
+                class="nav-button"
+                onclick="prevPage()">
+
+                ← BACK
+
+            </button>
+
+            <div class="nav-page">
+                05 / 06
+            </div>
+
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="nextPage()">
+
+                NEXT →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 6
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="page6">
+
+        <div class="page-scroll">
+
+            <div class="container final">
+
+                <div class="final-symbol">
+                    ⚡
+                </div>
+
+                <span class="tag">
+                    HAPPY TEACHER'S DAY
                 </span>
 
+                <div class="thanks">
+
+                    THANK<br>
+                    YOU.
+
+                </div>
+
+                <p
+                    style="
+                    max-width:650px;
+                    margin-top:25px;
+                    ">
+
+                    To Aminur Laskar —
+                    The Johnny —
+                    thank you for making Physics
+                    more than just a subject.
+
+                </p>
+
+                <p
+                    style="
+                    max-width:650px;
+                    margin-top:15px;
+                    ">
+
+                    Your knowledge, personality
+                    and mindset leave a mark on
+                    the students who learn from you.
+
+                </p>
+
+
+                <div class="creator">
+
+                    Created by
+
+                    <strong>
+                        SUHAIL TANWEER TAPADAR
+                    </strong>
+
+                    <span class="heart">
+                        ❤️
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
 
-    </div>
 
-    <div class="bottom-nav">
+        <div class="bottom-nav">
 
-        <button class="nav-button" onclick="prevPage()">
-            ← BACK
-        </button>
+            <button
+                type="button"
+                class="nav-button"
+                onclick="prevPage()">
 
-        <div class="nav-page">
-            06 / 06
+                ← BACK
+
+            </button>
+
+            <div class="nav-page">
+                06 / 06
+            </div>
+
+            <button
+                type="button"
+                class="nav-button next"
+                onclick="goHome()">
+
+                🏠 HOME
+
+            </button>
+
         </div>
 
-        <button class="nav-button next" onclick="goHome()">
-            🏠 HOME
-        </button>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =======================================================
-     JAVASCRIPT
-======================================================= -->
+    <!-- =====================================================
+         JAVASCRIPT
+         
+         IMPORTANT:
+         THERE IS NO SWIPE/TOUCH PAGE NAVIGATION HERE.
+         
+         Therefore:
+         Vertical scrolling = scrolling only.
+         NEXT button = next page.
+         BACK button = previous page.
+    ====================================================== -->
 
-<script>
-
-/* =========================================================
-   PAGE NAVIGATION
-========================================================= */
-
-let currentPage = 1;
-
-const totalPages = 6;
-
-
-/* SHOW PAGE */
-
-function showPage(pageNumber) {
-
-    if (pageNumber < 1) {
-        pageNumber = 1;
-    }
-
-    if (pageNumber > totalPages) {
-        pageNumber = totalPages;
-    }
-
-    document
-        .querySelectorAll(".page")
-        .forEach(function(page) {
-
-            page.classList.remove("active");
-
-        });
+    <script>
 
 
-    const selectedPage =
-        document.getElementById(
-            "page" + pageNumber
+        /* =================================================
+           PAGE VARIABLES
+        ================================================= */
+
+        let currentPage = 1;
+
+        const totalPages = 6;
+
+
+        /* =================================================
+           SHOW PAGE
+        ================================================= */
+
+        function showPage(pageNumber) {
+
+
+            /* Keep page number inside limits */
+
+            if (pageNumber < 1) {
+
+                pageNumber = 1;
+
+            }
+
+            if (pageNumber > totalPages) {
+
+                pageNumber = totalPages;
+
+            }
+
+
+            /* Remove active from every page */
+
+            const allPages =
+                document.querySelectorAll(".page");
+
+            allPages.forEach(function(page) {
+
+                page.classList.remove("active");
+
+            });
+
+
+            /* Find requested page */
+
+            const selectedPage =
+                document.getElementById(
+                    "page" + pageNumber
+                );
+
+
+            if (!selectedPage) {
+
+                return;
+
+            }
+
+
+            /* Activate requested page */
+
+            selectedPage.classList.add("active");
+
+
+            /* Update current page */
+
+            currentPage = pageNumber;
+
+
+            /* Reset ONLY the newly opened page
+               to its top position */
+
+            const scrollArea =
+                selectedPage.querySelector(
+                    ".page-scroll"
+                );
+
+
+            if (scrollArea) {
+
+                scrollArea.scrollTop = 0;
+
+            }
+
+        }
+
+
+        /* =================================================
+           NEXT PAGE
+        ================================================= */
+
+        function nextPage() {
+
+            if (currentPage < totalPages) {
+
+                showPage(
+                    currentPage + 1
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           PREVIOUS PAGE
+        ================================================= */
+
+        function prevPage() {
+
+            if (currentPage > 1) {
+
+                showPage(
+                    currentPage - 1
+                );
+
+            }
+
+        }
+
+
+        /* =================================================
+           HOME
+        ================================================= */
+
+        function goHome() {
+
+            showPage(1);
+
+        }
+
+
+        /* =================================================
+           REVEAL PHOTO
+        ================================================= */
+
+        function revealPhoto() {
+
+
+            const photo =
+                document.getElementById(
+                    "teacherPhoto"
+                );
+
+
+            const button =
+                document.getElementById(
+                    "revealButton"
+                );
+
+
+            if (!photo) {
+
+                return;
+
+            }
+
+
+            photo.classList.add(
+                "revealed"
+            );
+
+
+            if (button) {
+
+                button.textContent =
+                    "✓ PHOTO REVEALED";
+
+            }
+
+        }
+
+
+        /* =================================================
+           KEYBOARD NAVIGATION
+           
+           This works only with keyboard.
+           It does NOT affect phone scrolling.
+        ================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+
+                    nextPage();
+
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    prevPage();
+
+                }
+
+
+                if (
+                    event.key === "Home"
+                ) {
+
+                    goHome();
+
+                }
+
+            }
         );
 
 
-    if (selectedPage) {
+        /* =================================================
+           START WEBSITE
+        ================================================= */
 
-        selectedPage.classList.add("active");
+        showPage(1);
 
-        currentPage = pageNumber;
 
-        selectedPage
-            .querySelector(".page-scroll")
-            .scrollTo({
-                top: 0,
-                behavior: "instant"
-            });
+    </script>
 
-    }
-
-}
-
-
-/* NEXT */
-
-function nextPage() {
-
-    if (currentPage < totalPages) {
-
-        showPage(currentPage + 1);
-
-    }
-
-}
-
-
-/* BACK */
-
-function prevPage() {
-
-    if (currentPage > 1) {
-
-        showPage(currentPage - 1);
-
-    }
-
-}
-
-
-/* HOME */
-
-function goHome() {
-
-    showPage(1);
-
-}
-
-
-/* =========================================================
-   PHOTO REVEAL
-========================================================= */
-
-function revealPhoto() {
-
-    const photo =
-        document.getElementById("teacherPhoto");
-
-    const button =
-        document.getElementById("revealButton");
-
-
-    if (!photo) {
-        return;
-    }
-
-
-    photo.classList.add("revealed");
-
-
-    if (button) {
-
-        button.textContent =
-            "✓ PHOTO REVEALED";
-
-    }
-
-}
-
-
-/* =========================================================
-   KEYBOARD NAVIGATION
-========================================================= */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "ArrowRight") {
-
-            nextPage();
-
-        }
-
-        if (event.key === "ArrowLeft") {
-
-            prevPage();
-
-        }
-
-        if (event.key === "Home") {
-
-            goHome();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   SWIPE NAVIGATION
-========================================================= */
-
-let touchStartX = 0;
-
-let touchEndX = 0;
-
-
-document.addEventListener(
-    "touchstart",
-    function(event) {
-
-        touchStartX =
-            event.changedTouches[0].screenX;
-
-    },
-    { passive: true }
-);
-
-
-document.addEventListener(
-    "touchend",
-    function(event) {
-
-        touchEndX =
-            event.changedTouches[0].screenX;
-
-
-        const difference =
-            touchStartX - touchEndX;
-
-
-        if (Math.abs(difference) < 70) {
-            return;
-        }
-
-
-        if (difference > 0) {
-
-            nextPage();
-
-        } else {
-
-            prevPage();
-
-        }
-
-    },
-    { passive: true }
-);
-
-
-/* =========================================================
-   START
-========================================================= */
-
-showPage(1);
-
-</script>
 
 </body>
 </html>
