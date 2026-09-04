@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aminur Laskar | Johnny</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05070d;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,200,255,.16),transparent 28%),
+        radial-gradient(circle at 80% 80%,rgba(120,50,255,.18),transparent 30%),
+        radial-gradient(circle at 50% 50%,rgba(0,255,180,.05),transparent 35%);
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:45px 45px;
+    pointer-events:none;
+}
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+
+.page{
+    position:absolute;
+    inset:0;
+    padding:35px 25px 110px;
+    display:none;
+    overflow-y:auto;
+    z-index:2;
+}
+
+.page.active{
+    display:flex;
+    animation:pageIn .55s ease;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.page-content{
+    width:min(1100px,100%);
+    margin:auto;
+}
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.top-label{
+    display:inline-block;
+    padding:9px 18px;
+    border:1px solid rgba(0,220,255,.4);
+    border-radius:50px;
+    background:rgba(0,200,255,.08);
+    color:#74eaff;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    box-shadow:0 0 25px rgba(0,200,255,.1);
+}
+
+/* =========================================================
+   BIG TYPOGRAPHY
+========================================================= */
+
+.mega{
+    font-size:clamp(55px,12vw,145px);
+    line-height:.84;
+    font-weight:1000;
+    letter-spacing:-6px;
+    text-transform:uppercase;
+    margin-top:28px;
+}
+
+.mega span{
+    display:block;
+}
+
+.cyan{
+    color:#62eaff;
+    text-shadow:
+        0 0 10px rgba(0,220,255,.5),
+        0 0 45px rgba(0,220,255,.3);
+}
+
+.white{
+    color:#fff;
+}
+
+.purple{
+    color:#ad8cff;
+    text-shadow:
+        0 0 12px rgba(150,100,255,.5),
+        0 0 45px rgba(150,100,255,.3);
+}
+
+.green{
+    color:#65ffc9;
+    text-shadow:
+        0 0 12px rgba(0,255,180,.4),
+        0 0 45px rgba(0,255,180,.25);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-box{
+    width:100%;
+}
+
+.hero-sub{
+    max-width:750px;
+    margin:30px auto 0;
+    color:#aeb9ca;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.physics-symbols{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.symbol{
+    padding:12px 18px;
+    border-radius:14px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    font-weight:900;
+    color:#dce7f5;
+}
+
+/* =========================================================
+   STICKERS
+========================================================= */
+
+.stickers{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-top:28px;
+}
+
+.sticker{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:9px;
+    font-weight:1000;
+    font-size:14px;
+    letter-spacing:1px;
+    transform:rotate(-2deg);
+    box-shadow:5px 7px 0 rgba(0,0,0,.35);
+    color:#05070d;
+    background:#62eaff;
+}
+
+.sticker:nth-child(2){
+    transform:rotate(2deg);
+    background:#65ffc9;
+}
+
+.sticker:nth-child(3){
+    transform:rotate(-3deg);
+    background:#ad8cff;
+}
+
+.sticker:nth-child(4){
+    transform:rotate(3deg);
+    background:#fff;
+}
+
+/* =========================================================
+   PAGE TITLES
+========================================================= */
+
+.page-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.page-title h2{
+    margin-top:15px;
+    font-size:clamp(40px,7vw,78px);
+    line-height:.95;
+    text-transform:uppercase;
+    font-weight:1000;
+}
+
+.page-title p{
+    color:#9ca9bb;
+    margin-top:15px;
+    font-size:16px;
+}
+
+/* =========================================================
+   NAME PAGE
+========================================================= */
+
+.name-card{
+    max-width:950px;
+    margin:auto;
+    padding:40px;
+    text-align:center;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:30px;
+    box-shadow:0 25px 80px rgba(0,0,0,.4);
+}
+
+.name{
+    font-size:clamp(45px,9vw,100px);
+    line-height:.9;
+    font-weight:1000;
+    text-transform:uppercase;
+    letter-spacing:-4px;
+}
+
+.nickname{
+    margin-top:18px;
+    font-size:clamp(25px,5vw,50px);
+    font-weight:1000;
+    color:#62eaff;
+    text-transform:uppercase;
+    letter-spacing:5px;
+}
+
+.ajmal{
+    margin-top:25px;
+    color:#d6deea;
+    font-size:19px;
+}
+
+.ajmal strong{
+    color:#65ffc9;
+}
+
+/* =========================================================
+   PHOTO SYSTEM
+========================================================= */
+
+.photo-frame{
+    width:min(390px,90vw);
+    aspect-ratio:4/5;
+    margin:25px auto;
+    position:relative;
+    border-radius:28px;
+    overflow:hidden;
+    border:2px solid rgba(98,234,255,.35);
+    background:
+        linear-gradient(135deg,#101827,#080b12);
+    box-shadow:
+        0 0 40px rgba(0,210,255,.12),
+        0 25px 70px rgba(0,0,0,.5);
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.photo-placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    color:#7d899a;
+    font-weight:bold;
+}
+
+/* Scratch cover */
+
+.scratch-cover{
+    position:absolute;
+    inset:0;
+    z-index:3;
+    cursor:pointer;
+    background:
+        repeating-linear-gradient(
+            125deg,
+            #1c2431 0px,
+            #1c2431 4px,
+            #263244 4px,
+            #263244 8px
+        );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.scratch-cover::before{
+    content:"";
+    position:absolute;
+    inset:15px;
+    border:2px dashed rgba(255,255,255,.3);
+    border-radius:20px;
+}
+
+.scratch-text{
+    position:relative;
+    z-index:2;
+    padding:25px;
+}
+
+.scratch-text strong{
+    display:block;
+    font-size:28px;
+    color:#62eaff;
+    text-transform:uppercase;
+}
+
+.scratch-text span{
+    display:block;
+    margin-top:10px;
+    color:#d4dbe5;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.photo-frame.revealed .scratch-cover{
+    opacity:0;
+    transform:translateY(-100%);
+    pointer-events:none;
+}
+
+/* =========================================================
+   HIGHLIGHT CARDS
+========================================================= */
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.highlight{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:28px;
+    padding:22px;
+    transition:.3s ease;
+}
+
+.highlight:hover{
+    transform:translateY(-5px);
+    border-color:rgba(98,234,255,.4);
+}
+
+.highlight-photo{
+    width:100%;
+    aspect-ratio:16/10;
+    border-radius:20px;
+    overflow:hidden;
+    background:#111722;
+}
+
+.highlight-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.highlight h3{
+    font-size:clamp(28px,5vw,48px);
+    line-height:.95;
+    margin-top:22px;
+    font-weight:1000;
+    text-transform:uppercase;
+}
+
+.highlight p{
+    margin-top:12px;
+    color:#9eabba;
+    line-height:1.6;
+}
+
+.highlight:nth-child(1) h3{
+    color:#62eaff;
+}
+
+.highlight:nth-child(2) h3{
+    color:#65ffc9;
+}
+
+.highlight:nth-child(3) h3{
+    color:#ad8cff;
+}
+
+.highlight:nth-child(4) h3{
+    color:#fff;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-box{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.intro-box p{
+    color:#c0c9d5;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.big-line{
+    margin:35px 0;
+    font-size:clamp(30px,6vw,65px);
+    font-weight:1000;
+    line-height:1;
+    text-transform:uppercase;
+    color:#62eaff;
+}
+
+/* =========================================================
+   MOTIVATION
+========================================================= */
+
+.motivation-list{
+    max-width:950px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.motivation{
+    padding:25px 28px;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,
+        rgba(98,234,255,.08),
+        rgba(255,255,255,.035)
+    );
+    border-left:5px solid #62eaff;
+}
+
+.motivation-number{
+    color:#65ffc9;
+    font-weight:1000;
+    font-size:13px;
+    letter-spacing:3px;
+}
+
+.motivation h3{
+    margin-top:8px;
+    font-size:clamp(23px,4vw,38px);
+    line-height:1.1;
+    text-transform:uppercase;
+}
+
+.motivation p{
+    color:#9daaba;
+    margin-top:8px;
+}
+
+/* =========================================================
+   FINAL PAGE
+========================================================= */
+
+.final-box{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.final-box h2{
+    font-size:clamp(50px,10vw,120px);
+    line-height:.85;
+    font-weight:1000;
+    text-transform:uppercase;
+}
+
+.final-box p{
+    max-width:700px;
+    margin:30px auto;
+    color:#aeb8c7;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.signature{
+    margin-top:35px;
+    font-size:22px;
+    color:#62eaff;
+    font-weight:bold;
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100;
+    min-height:78px;
+    padding:10px 12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    background:rgba(5,7,13,.94);
+    border-top:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(18px);
+}
+
+.nav-btn{
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.055);
+    color:#b9c4d3;
+    text-decoration:none;
+    border-radius:14px;
+    min-width:75px;
+    padding:10px 12px;
+    text-align:center;
+    font-size:10px;
+    font-weight:1000;
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.nav-btn:hover,
+.nav-btn:active{
+    color:#05070d;
+    background:#62eaff;
+    transform:translateY(-3px);
+}
+
+.nav-btn.active-nav{
+    background:#62eaff;
+    color:#05070d;
+}
+
+/* =========================================================
+   PAGE COUNTER
+========================================================= */
+
+.page-counter{
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:50;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.12);
+    color:#8190a3;
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:700px){
+
+    .page{
+        padding:25px 15px 105px;
+    }
+
+    .mega{
+        letter-spacing:-3px;
+    }
+
+    .highlight-grid{
+        grid-template-columns:1fr;
+    }
+
+    .name-card,
+    .intro-box{
+        padding:25px 18px;
+    }
+
+    .intro-box p{
+        font-size:17px;
+    }
+
+    .bottom-nav{
+        overflow-x:auto;
+        justify-content:flex-start;
+    }
+
+    .nav-btn{
+        flex:0 0 auto;
+        min-width:67px;
+        padding:9px 8px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+<!-- =====================================================
+     PAGE 1 — HOME
+===================================================== -->
+
+<section class="page active" id="page1">
+
+<div class="page-content hero">
+
+<div class="hero-box">
+
+<div class="top-label">
+Physics • Special Tribute
+</div>
+
+<div class="mega">
+<span class="cyan">AMINUR</span>
+<span class="white">LASKAR</span>
+</div>
+
+<div class="mega" style="font-size:clamp(35px,7vw,75px);margin-top:20px;">
+<span class="purple">THE JOHNNY</span>
+</div>
+
+<p class="hero-sub">
+A stylish tribute to a personality known for confidence,
+friendliness, intelligence and a mind that never stops moving.
+</p>
+
+<div class="stickers">
+
+<div class="sticker">⚡ PHYSICS MIND</div>
+<div class="sticker">🧠 SHARP</div>
+<div class="sticker">🔥 JOHNNY</div>
+<div class="sticker">🚀 UNSTOPPABLE</div>
+
+</div>
+
+<div class="physics-symbols">
+<div class="symbol">E = mc²</div>
+<div class="symbol">F = ma</div>
+<div class="symbol">λ = h/p</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PAGE 2 — NAME + SCRATCH PHOTO
+===================================================== -->
+
+<section class="page" id="page2">
+
+<div class="page-content">
+
+<div class="page-title">
+
+<div class="top-label">
+01 • Identity
+</div>
+
+<h2>
+Meet The<br>
+<span class="cyan">Legend</span>
+</h2>
+
+<p>
+The name behind the nickname.
+</p>
+
+</div>
+
+
+<div class="name-card">
+
+<div class="name">
+AMINUR<br>
+<span class="cyan">LASKAR</span>
+</div>
+
+<div class="nickname">
+“JOHNNY”
+</div>
+
+<p class="ajmal">
+⚡ Physics Teacher •
+<strong>Ajmal Super 40</strong> •
+Mentor • Inspiration
+</p>
+
+
+<div class="photo-frame" id="scratchPhoto">
+
+<img
+src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+alt="Aminur Laskar"
+onerror="this.style.display='none';"
+>
+
+<div class="scratch-cover"
+onclick="revealPhoto()">
+
+<div class="scratch-text">
+
+<strong>SCRATCH TO REVEAL</strong>
+
+<span>
+TAP HERE TO REVEAL THE PICTURE
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stickers">
+<div class="sticker">⚡ JOHNNY</div>
+<div class="sticker">🎯 FOCUSED</div>
+<div class="sticker">🧠 BRAIN MODE</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PAGE 3 — INTRODUCTION
+===================================================== -->
+
+<section class="page" id="page3">
+
+<div class="page-content">
+
+<div class="page-title">
+
+<div class="top-label">
+02 • Introduction
+</div>
+
+<h2>
+The <span class="green">Personality</span>
+</h2>
+
+<p>
+More than a teacher — a memorable presence.
+</p>
+
+</div>
+
+
+<div class="intro-box">
+
+<p>
+Meet <strong>Aminur Laskar</strong>, famously known as
+<strong>Johnny</strong> — a personality that combines
+confidence, friendliness and a sharp way of thinking.
+</p>
+
+<p>
+With his connection to <strong>Ajmal Super 40</strong>,
+physics becomes more than formulas and equations.
+It becomes a way of thinking, questioning and solving.
+</p>
+
+<div class="big-line">
+Think sharp.<br>
+Stay calm.<br>
+Move forward.
+</div>
+
+<p>
+The real attraction is not only knowledge.
+It is the combination of attitude, intelligence,
+friendliness and the ability to make an impression.
+</p>
+
+<div class="stickers">
+<div class="sticker">😎 HANDSOME</div>
+<div class="sticker">🤝 FRIENDLY</div>
+<div class="sticker">🧠 SHARP MIND</div>
+<div class="sticker">💫 MIND-BLOWING</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PAGE 4 — FOUR PERSONALITY FEATURES
+===================================================== -->
+
+<section class="page" id="page4">
+
+<div class="page-content">
+
+<div class="page-title">
+
+<div class="top-label">
+03 • Personality
+</div>
+
+<h2>
+Four <span class="cyan">Vibes</span>
+</h2>
+
+<p>
+Different qualities. One unforgettable personality.
+</p>
+
+</div>
+
+
+<div class="highlight-grid">
+
+
+<!-- HANDSOME -->
+
+<div class="highlight">
+
+<div class="highlight-photo">
+
+<img
+src="IMG_20260904_083942.jpg"
+alt="Aminur Laskar handsome"
+onerror="this.style.display='none';"
+>
+
+</div>
+
+<h3>
+😎 HANDSOME
+</h3>
+
+<p>
+Confidence is the real style — and the right attitude
+makes the personality stand out naturally.
+</p>
+
+</div>
+
+
+<!-- FRIENDLY -->
+
+<div class="highlight">
+
+<div class="highlight-photo">
+
+<img
+src="IMG_20260904_083858.jpg"
+alt="Aminur Laskar friendly"
+onerror="this.style.display='none';"
+>
+
+</div>
+
+<h3>
+🤝 FRIENDLY
+</h3>
+
+<p>
+A good personality is not only about intelligence.
+Being approachable, respectful and friendly matters too.
+</p>
+
+</div>
+
+
+<!-- SHARP MIND -->
+
+<div class="highlight">
+
+<div class="highlight-photo">
+
+<img
+src="IMG_20260904_083928.jpg"
+alt="Aminur Laskar sharp mind"
+onerror="this.style.display='none';"
+>
+
+</div>
+
+<h3>
+🧠 SHARP MIND
+</h3>
+
+<p>
+Physics demands logic, focus and curiosity —
+the mindset that keeps asking “why?” and “how?”
+</p>
+
+</div>
+
+
+<!-- MIND BLOWING -->
+
+<div class="highlight">
+
+<div class="highlight-photo">
+
+<img
+src="Screenshot_2026-09-04-08-57-32-14_1c337646f29875672b5a61192b9010f9.jpg"
+alt="Aminur Laskar personality"
+onerror="this.style.display='none';"
+>
+
+</div>
+
+<h3>
+💫 MIND-BLOWING
+</h3>
+
+<p>
+The combination of knowledge, confidence and personality
+creates the kind of impression people remember.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PAGE 5 — FIVE MOTIVATION LINES
+===================================================== -->
+
+<section class="page" id="page5">
+
+<div class="page-content">
+
+<div class="page-title">
+
+<div class="top-label">
+04 • Mindset
+</div>
+
+<h2>
+<span class="purple">BOYS</span><br>
+SHARP MINDSET
+</h2>
+
+<p>
+Five lines to build confidence, discipline and focus.
+</p>
+
+</div>
+
+
+<div class="motivation-list">
+
+
+<div class="motivation">
+
+<div class="motivation-number">
+MINDSET 01
+</div>
+
+<h3>
+🧠 Train Your Mind Before You Train Your Image.
+</h3>
+
+<p>
+A sharp mind creates confidence that no appearance can replace.
+</p>
+
+</div>
+
+
+<div class="motivation">
+
+<div class="motivation-number">
+MINDSET 02
+</div>
+
+<h3>
+🔥 Don't Chase Attention. Build Value.
+</h3>
+
+<p>
+Work on yourself quietly. Let your results become the noise.
+</p>
+
+</div>
+
+
+<div class="motivation">
+
+<div class="motivation-number">
+MINDSET 03
+</div>
+
+<h3>
+⚡ Stay Calm. Think Fast. Move Smart.
+</h3>
+
+<p>
+Pressure should sharpen your mind, not control it.
+</p>
+
+</div>
+
+
+<div class="motivation">
+
+<div class="motivation-number">
+MINDSET 04
+</div>
+
+<h3>
+🦁 Discipline Makes Ordinary Boys Extraordinary.
+</h3>
+
+<p>
+Motivation may start the journey, but discipline keeps you moving.
+</p>
+
+</div>
+
+
+<div class="motivation">
+
+<div class="motivation-number">
+MINDSET 05
+</div>
+
+<h3>
+🚀 Dream Big. Work Silent. Become Unstoppable.
+</h3>
+
+<p>
+Keep improving when nobody is watching.
+One day, your growth will speak for itself.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =====================================================
+     PAGE 6 — FINAL
+===================================================== -->
+
+<section class="page" id="page6">
+
+<div class="page-content">
+
+<div class="final-box">
+
+<div class="top-label">
+05 • Final Frame
+</div>
+
+<h2 style="margin-top:30px;">
+
+<span class="cyan">
+STAY
+</span>
+
+<span>
+SHARP.
+</span>
+
+<span class="purple">
+STAY
+</span>
+
+<span>
+UNSTOPPABLE.
+</span>
+
+</h2>
+
+<p>
+A name can be remembered.
+A lesson can be remembered.
+But a personality that inspires people
+can become a memory for a lifetime.
+</p>
+
+<div class="stickers">
+
+<div class="sti
